@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 20;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface":"#f7f9fb","on-surface-variant":"#40484d","primary-fixed-dim":"#8fcfee","on-secondary-container":"#2f677e","background":"#f7f9fb","on-tertiary-fixed":"#0b1c30","surface-container-lowest":"#ffffff","surface-variant":"#e0e3e5","surface-container-low":"#f2f4f6","surface-container-high":"#e6e8ea","tertiary-fixed-dim":"#b7c8e1","primary-container":"#0f5f7a","secondary-container":"#afe4ff","surface-container-highest":"#e0e3e5","tertiary-fixed":"#d3e4fe","on-error-container":"#93000a","secondary-fixed":"#bde9ff","primary-fixed":"#bee9ff","outline":"#70787d","inverse-primary":"#8fcfee","on-error":"#ffffff","primary":"#00465c","surface-dim":"#d8dadc","on-secondary-fixed":"#001f2a","on-secondary":"#ffffff","on-tertiary-fixed-variant":"#38485d","on-secondary-fixed-variant":"#0a4d63","secondary-fixed-dim":"#98cee8","tertiary-container":"#49596f","surface-bright":"#f7f9fb","error-container":"#ffdad6","inverse-on-surface":"#eff1f3","secondary":"#2d657c","error":"#ba1a1a","on-tertiary-container":"#bfd0ea","on-primary-container":"#96d7f6","on-primary-fixed-variant":"#004d65","tertiary":"#324257","on-background":"#191c1e","surface-tint":"#1b6681","outline-variant":"#bfc8cd","on-primary":"#ffffff","inverse-surface":"#2d3133","on-tertiary":"#ffffff","surface-container":"#eceef0","on-primary-fixed":"#001f2a","on-surface":"#191c1e"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"gutter":"1rem","space-xl":"2rem","margin-lg":"2rem","space-xs":"0.25rem","margin":"1.5rem","space-sm":"0.5rem","gutter-sm":"0.5rem","space-lg":"1.5rem","space-md":"1rem","gutter-lg":"1.5rem","margin-sm":"1rem"},fontFamily:{"body-lg":["Inter"],"headline-lg":["Inter"],"headline-sm":["Inter"],"caption":["Inter"],"headline-xl-mobile":["Inter"],"label-sm":["JetBrains Mono"],"body-sm":["Inter"],"body-md":["Inter"],"label-lg":["JetBrains Mono"],"label-md":["JetBrains Mono"],"headline-md":["Inter"],"headline-xl":["Inter"]},fontSize:{"body-lg":["15px",{lineHeight:"22px",fontWeight:"400"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"caption":["11px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"500"}],"headline-xl-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"500"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"body-md":["13px",{lineHeight:"20px",fontWeight:"400"}],"label-lg":["13px",{lineHeight:"18px",letterSpacing:"0.02em",fontWeight:"500"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest border-r border-outline-variant/40 z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-md border-b border-outline-variant/40 flex items-center justify-between bg-surface-container-low/50"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[19px]">precision_manufacturing</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-tight">PTS CORE</span><span class="font-caption text-caption text-on-surface-variant font-mono text-[9px] uppercase tracking-wider">ISO 7 Cleanroom Div</span></div></div><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold tracking-wider">L04</span></div><div class="px-space-md py-space-sm bg-surface-container border-b border-outline-variant/30 flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary text-[16px]">tune</span><div class="flex flex-col"><span class="font-caption text-caption text-on-surface-variant uppercase font-medium">Operational Context</span><span class="font-label-md text-label-md text-on-surface font-semibold">Packaging Lead / Cleanroom Line 04</span></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-md"><nav class="space-y-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg shadow-sm"><div class="space-y-1"><div class="px-space-sm py-1 font-caption text-caption uppercase tracking-wider text-outline font-semibold">Batch Core</div><a class="min-h-[44px] flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="font-body-md text-body-md">Dashboard</span></div><span class="font-label-sm text-label-sm text-on-surface-variant/80 font-mono">S05</span></a><a class="min-h-[44px] flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="binders" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">folder_special</span><span class="font-body-md text-body-md">Binders</span></div><span class="font-label-sm text-label-sm text-on-surface-variant/80 font-mono">S06</span></a></div><div class="space-y-1"><div class="px-space-sm py-1 font-caption text-caption uppercase tracking-wider text-outline font-semibold">Trace &amp; Environmental</div><a class="min-h-[44px] flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="cold-rooms" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">ac_unit</span><span class="font-body-md text-body-md">Cold rooms</span></div><span class="font-label-sm text-label-sm text-on-surface-variant/80 font-mono">S10</span></a><a class="min-h-[44px] flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="scan-and-verify" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">qr_code_scanner</span><span class="font-body-md text-body-md">Scan &amp; Verify</span></div><span class="font-label-sm text-label-sm text-on-surface-variant/80 font-mono">S11</span></a></div><div class="space-y-1"><div class="px-space-sm py-1 font-caption text-caption uppercase tracking-wider text-outline font-semibold">Compliance &amp; Audit</div><a class="min-h-[44px] flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports-and-audit" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">assignment_turned_in</span><span class="font-body-md text-body-md">Reports &amp; Audit</span></div><span class="font-label-sm text-label-sm text-on-surface-variant/80 font-mono">S12</span></a><a class="min-h-[44px] flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="signatures-log" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">draw</span><span class="font-body-md text-body-md">Signatures Log</span></div><span class="font-label-sm text-label-sm text-on-surface-variant/80 font-mono">LOG</span></a><a class="min-h-[44px] flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="audit-trail" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">history_edu</span><span class="font-body-md text-body-md">Audit Trail</span></div><span class="font-label-sm text-label-sm text-on-surface-variant/80 font-mono">S17</span></a></div><div class="space-y-1"><div class="px-space-sm py-1 font-caption text-caption uppercase tracking-wider text-outline font-semibold">Administration &amp; Security</div><a class="min-h-[44px] flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="user-management" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">manage_accounts</span><span class="font-body-md text-body-md">User Management</span></div><span class="font-label-sm text-label-sm text-on-surface-variant/80 font-mono">S18</span></a><a class="min-h-[44px] flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="groups-and-access-rights" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">security</span><span class="font-body-md text-body-md">Groups &amp; Access Rights</span></div><span class="font-label-sm text-label-sm text-on-surface-variant/80 font-mono">S19</span></a><a class="min-h-[44px] flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="masters" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">database</span><span class="font-body-md text-body-md">Masters</span></div><span class="font-label-sm text-label-sm text-on-surface-variant/80 font-mono">S20</span></a><a aria-current="page" class="min-h-[44px] flex items-center justify-between px-space-sm py-2 transition-colors bg-primary-container text-on-primary font-semibold rounded-lg shadow-sm" data-path="workflow-designer" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">schema</span><span class="font-body-md text-body-md">Workflow Designer</span></div><span class="font-label-sm text-label-sm text-on-surface-variant/80 font-mono">S22</span></a><a class="min-h-[44px] flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="barcode-designer" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">barcode</span><span class="font-body-md text-body-md">Barcode Designer</span></div><span class="font-label-sm text-label-sm text-on-surface-variant/80 font-mono">S21</span></a></div></nav></div></div><div class="p-space-sm border-t border-outline-variant/40 bg-surface-container-low/70 space-y-space-xs"><div class="flex items-center justify-between px-space-sm py-1.5 rounded bg-surface-container-lowest border border-outline-variant/40"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold">GMP STATUS</span></div><span class="font-label-sm text-label-sm text-secondary font-mono font-medium">21 CFR Part 11 Active</span></div><div class="text-center py-1 px-space-xs rounded bg-surface-variant/80 border border-outline-variant/50"><span class="font-label-sm text-label-sm tracking-widest text-on-surface-variant font-bold">PROTOTYPE - NOT VALIDATED</span></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur border-b border-outline-variant/40 z-40 px-space-lg flex items-center justify-between shadow-[0_1px_4px_rgba(15,95,122,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">Company Pharmaceutical Limited</span><span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold tracking-wide">PTS-GMP</span></div><div class="h-4 w-px bg-outline-variant/60 hidden xl:block"></div><nav class="hidden xl:flex items-center gap-space-md h-16" data-active-classes="text-primary font-semibold border-b-2 border-primary"><a class="h-full flex items-center font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors px-1" data-path="dashboard" href="#">Dashboard</a><a aria-current="page" class="h-full flex items-center transition-colors px-1 text-primary font-semibold border-b-2 border-primary" data-path="workflow-designer" href="#">Line Workflows</a><a class="h-full flex items-center font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors px-1" data-path="audit-trail" href="#">Audit Verification</a><a class="h-full flex items-center font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors px-1" data-path="reports-and-audit" href="#">Reports</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-sm px-space-sm py-1 rounded bg-surface-container-low border border-outline-variant/40 text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-outline">schedule</span><span class="font-caption text-caption text-outline font-medium">Server:</span><span class="font-label-sm text-label-sm font-mono text-on-surface font-semibold">26/02/2025 14:38 UTC</span></div><div class="hidden lg:flex items-center gap-1.5 px-space-sm py-1 rounded bg-surface-container-low border border-outline-variant/40 text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-outline">timer</span><span class="font-caption text-caption text-outline font-medium">Idle Logoff:</span><span class="font-label-sm text-label-sm font-mono text-error font-semibold">24:18</span></div><button class="min-h-[44px] min-w-[44px] flex items-center justify-center relative text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-4 h-4 rounded-full bg-error text-on-error font-label-sm text-[10px] font-bold flex items-center justify-center leading-none">3</span></button><div class="h-6 w-px bg-outline-variant/50"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right leading-tight"><span class="font-body-md text-body-md font-semibold text-on-surface">Anita Shah</span><span class="font-label-sm text-label-sm text-secondary font-mono text-[11px]">INITIATOR Sec-L2</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 flex-1 bg-surface"><div class="flex flex-col w-full">
+<!-- Page Header Container -->
+<section class="p-space-lg bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<!-- Breadcrumb & Contextual Badges -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm font-semibold tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          21 CFR PART 11 VALIDATED PROCESS
+        </span>
+<span class="text-outline font-label-sm text-label-sm">•</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-mono font-medium">
+          SOP-WFL-002 REV 03
+        </span>
+<span class="text-outline font-label-sm text-label-sm">•</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">schema</span>
+          ACTIVE BATCH WORKFLOW: BWF-BIO-2025-A
+        </span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 font-label-sm text-label-sm font-semibold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-emerald-700">verified</span>
+          LIFECYCLE: VALIDATED (v3.2)
+        </span>
+<span class="font-label-sm text-label-sm font-mono text-outline">HASH: 9E4F-02A</span>
+</div>
+</div>
+<!-- Title and Action Bar -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-col max-w-3xl">
+<h1 class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">S22 Workflow Designer</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+          Configure validated stage sequences, allowed transitions, hold-time parameters, and multi-tier cryptographic sign-off rules under strict GMP change control.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<button class="min-h-[44px] px-3.5 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-headline-sm text-body-md font-medium transition-colors flex items-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">swap_vertical_circle</span>
+<span>Export / Import Configuration</span>
+</button>
+<button class="min-h-[44px] px-4 py-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low text-primary font-headline-sm text-body-md font-semibold transition-colors flex items-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+<span>Save Draft</span>
+</button>
+<button class="min-h-[44px] px-4 py-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-body-md font-semibold transition-colors flex items-center gap-2 shadow-sm shadow-primary/20" type="button">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Publish Workflow &amp; e-Sign</span>
+</button>
+</div>
+</div>
+<!-- Navigation Tabs Bar -->
+<nav class="flex items-center gap-space-lg -mb-space-md mt-space-xs overflow-x-auto select-none">
+<a class="min-h-[44px] flex items-center gap-2 px-1 font-body-md text-body-md font-semibold text-primary relative" href="#">
+<span class="material-symbols-outlined text-[18px]">linear_scale</span>
+<span>Stages</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-[11px] font-bold">5 Stages</span>
+<span class="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-container"></span>
+</a>
+<a class="min-h-[44px] flex items-center gap-2 px-1 font-body-md text-body-md font-medium text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">timelapse</span>
+<span>Hold-time rules</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[10px]">2 Strict</span>
+</a>
+<a class="min-h-[44px] flex items-center gap-2 px-1 font-body-md text-body-md font-medium text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">draw</span>
+<span>Signature routing</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[10px]">Part 11</span>
+</a>
+<a class="min-h-[44px] flex items-center gap-2 px-1 font-body-md text-body-md font-medium text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>General</span>
+</a>
+</nav>
+</section>
+<!-- Main Workspace Area -->
+<div class="p-space-lg flex flex-col gap-space-lg">
+<!-- Notice Bar and Action Cluster -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex items-start md:items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/40 text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">policy</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-body-md text-on-surface font-semibold">Regulatory Stage Governance</span>
+<span class="px-2 py-0.2 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[11px] font-semibold">GMP L4</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Stage progression is strictly governed by electronic custody transfer. Any deletion or order modification requires QA re-validation and Part 11 re-authentication.
+          </p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-2 flex-shrink-0">
+<button class="min-h-[44px] px-3.5 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-headline-sm text-body-md font-medium transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">drag_indicator</span>
+<span>Reorder Stages</span>
+</button>
+<button class="min-h-[44px] px-3.5 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-headline-sm text-body-md font-medium transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">fact_check</span>
+<span>Validate Path</span>
+</button>
+<button class="min-h-[44px] px-4 py-2 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-headline-sm text-body-md font-semibold transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ Add Stage</span>
+</button>
+</div>
+</div>
+<!-- Visual Interactive Flow Canvas (Horizontal Sequence) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Active Execution Sequence</span>
+<span class="font-label-sm text-label-sm font-mono text-outline">(5 Sequential Nodes • 6 Legal Paths)</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="min-h-[44px] min-w-[44px] rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors" title="Zoom to fit" type="button">
+<span class="material-symbols-outlined text-[18px]">fit_screen</span>
+</button>
+<button class="min-h-[44px] min-w-[44px] rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors" title="Canvas Settings" type="button">
+<span class="material-symbols-outlined text-[18px]">settings</span>
+</button>
+</div>
+</div>
+<!-- Flow Container with horizontal scroll -->
+<div class="overflow-x-auto pb-4 pt-1">
+<div class="min-w-[1240px] flex items-center justify-between gap-2 px-1">
+<!-- STAGE 1 CARD -->
+<div class="w-60 bg-surface-container-low rounded-xl p-space-md flex flex-col gap-3 shadow-sm hover:shadow transition-all relative">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-outline cursor-grab active:cursor-grabbing">
+<span class="material-symbols-outlined text-[16px]">drag_indicator</span>
+<span class="font-label-sm text-label-sm font-mono font-bold text-primary">STG-01</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 rounded hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Edit STG-01" type="button">
+<span class="material-symbols-outlined text-[15px]">edit</span>
+</button>
+<button class="w-7 h-7 rounded hover:bg-red-100 flex items-center justify-center text-error transition-colors" title="Remove STG-01" type="button">
+<span class="material-symbols-outlined text-[15px]">delete</span>
+</button>
+</div>
+</div>
+<div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-[10px] uppercase font-semibold">Operational / Intake</span>
+<h2 class="font-headline-sm text-body-lg font-bold text-on-surface mt-1 leading-snug">Filling complete</h2>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-lg flex flex-col gap-1.5 text-body-sm">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-outline">Roles Allowed:</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate max-w-[110px]" title="Initiator, Packaging Lead">Init, Pack Lead</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-outline">Remarks:</span>
+<span class="inline-flex items-center gap-1 text-emerald-800 font-label-sm text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-700"></span> Mandatory
+                </span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 font-label-sm text-[10px] font-bold">
+<span class="material-symbols-outlined text-[12px] text-emerald-700">check_circle</span> ACTIVE
+              </span>
+<span class="font-caption text-caption text-outline">Pos #1</span>
+</div>
+</div>
+<!-- CONNECTOR ARROW 1 -> 2 -->
+<div class="flex flex-col items-center justify-center px-1">
+<span class="font-label-sm text-[10px] font-mono font-medium text-secondary bg-surface-container px-2 py-0.5 rounded-full shadow-xs mb-1 text-center whitespace-nowrap">
+              Direct Transfer / Handover
+            </span>
+<div class="flex items-center text-primary-container">
+<div class="w-10 h-0.5 bg-primary-container"></div>
+<span class="material-symbols-outlined text-[18px] -ml-2 text-primary-container">arrow_forward</span>
+</div>
+</div>
+<!-- STAGE 2 CARD (SELECTED / HIGHLIGHTED) -->
+<div class="w-64 bg-surface-container-lowest rounded-xl p-space-md flex flex-col gap-3 shadow-md ring-2 ring-primary relative">
+<div class="absolute -top-2.5 left-4 px-2 py-0.2 rounded bg-primary text-on-primary font-label-sm text-[10px] font-bold tracking-wider uppercase">
+              Selected in Editor
+            </div>
+<div class="flex items-center justify-between mt-0.5">
+<div class="flex items-center gap-1 text-outline cursor-grab active:cursor-grabbing">
+<span class="material-symbols-outlined text-[16px]">drag_indicator</span>
+<span class="font-label-sm text-label-sm font-mono font-bold text-primary">STG-02</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-7 h-7 rounded bg-secondary-container/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[15px]">edit</span>
+</span>
+<button class="w-7 h-7 rounded hover:bg-red-100 flex items-center justify-center text-error transition-colors" title="Remove STG-02" type="button">
+<span class="material-symbols-outlined text-[15px]">delete</span>
+</button>
+</div>
+</div>
+<div>
+<span class="px-2 py-0.5 rounded bg-cyan-50 text-cyan-900 font-label-sm text-[10px] uppercase font-semibold">Env Controlled (CR-01/02)</span>
+<h2 class="font-headline-sm text-body-lg font-bold text-primary mt-1 leading-snug">Cold room storage</h2>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col gap-1.5 text-body-sm">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-outline">Roles Allowed:</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate max-w-[120px]" title="Cold Room Operator, Initiator">Cold Op, Init</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-outline">Remarks:</span>
+<span class="inline-flex items-center gap-1 text-cyan-900 font-label-sm text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-700"></span> Bay Scan Req
+                </span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-amber-50 text-amber-900 font-label-sm text-[10px] font-bold">
+<span class="material-symbols-outlined text-[12px] text-amber-700">timer</span> 1h 00m limit
+              </span>
+<span class="font-caption text-caption text-outline">Pos #2</span>
+</div>
+</div>
+<!-- CONNECTOR ARROW 2 -> 3 -->
+<div class="flex flex-col items-center justify-center px-1">
+<span class="font-label-sm text-[10px] font-mono font-medium text-secondary bg-surface-container px-2 py-0.5 rounded-full shadow-xs mb-1 text-center whitespace-nowrap">
+              Cold-chain dispatch
+            </span>
+<div class="flex items-center text-primary-container">
+<div class="w-10 h-0.5 bg-primary-container"></div>
+<span class="material-symbols-outlined text-[18px] -ml-2 text-primary-container">arrow_forward</span>
+</div>
+</div>
+<!-- STAGE 3 CARD -->
+<div class="w-60 bg-surface-container-low rounded-xl p-space-md flex flex-col gap-3 shadow-sm hover:shadow transition-all relative">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-outline cursor-grab active:cursor-grabbing">
+<span class="material-symbols-outlined text-[16px]">drag_indicator</span>
+<span class="font-label-sm text-label-sm font-mono font-bold text-primary">STG-03</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 rounded hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Edit STG-03" type="button">
+<span class="material-symbols-outlined text-[15px]">edit</span>
+</button>
+<button class="w-7 h-7 rounded hover:bg-red-100 flex items-center justify-center text-error transition-colors" title="Remove STG-03" type="button">
+<span class="material-symbols-outlined text-[15px]">delete</span>
+</button>
+</div>
+</div>
+<div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-[10px] uppercase font-semibold">QA In-process Check</span>
+<h2 class="font-headline-sm text-body-lg font-bold text-on-surface mt-1 leading-snug">Visual inspection</h2>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-lg flex flex-col gap-1.5 text-body-sm">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-outline">Roles Allowed:</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate max-w-[110px]" title="QA Inspector, Initiator">QA Insp, Init</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-outline">Remarks:</span>
+<span class="inline-flex items-center gap-1 text-emerald-800 font-label-sm text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-700"></span> Defect Count
+                </span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 font-label-sm text-[10px] font-bold">
+<span class="material-symbols-outlined text-[12px] text-emerald-700">check_circle</span> ACTIVE
+              </span>
+<span class="font-caption text-caption text-outline">Pos #3</span>
+</div>
+</div>
+<!-- CONNECTOR ARROW 3 -> 4 -->
+<div class="flex flex-col items-center justify-center px-1">
+<span class="font-label-sm text-[10px] font-mono font-medium text-secondary bg-surface-container px-2 py-0.5 rounded-full shadow-xs mb-1 text-center whitespace-nowrap">
+              Line 04 clearance
+            </span>
+<div class="flex items-center text-primary-container">
+<div class="w-10 h-0.5 bg-primary-container"></div>
+<span class="material-symbols-outlined text-[18px] -ml-2 text-primary-container">arrow_forward</span>
+</div>
+</div>
+<!-- STAGE 4 CARD -->
+<div class="w-60 bg-surface-container-low rounded-xl p-space-md flex flex-col gap-3 shadow-sm hover:shadow transition-all relative">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-outline cursor-grab active:cursor-grabbing">
+<span class="material-symbols-outlined text-[16px]">drag_indicator</span>
+<span class="font-label-sm text-label-sm font-mono font-bold text-primary">STG-04</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 rounded hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Edit STG-04" type="button">
+<span class="material-symbols-outlined text-[15px]">edit</span>
+</button>
+<button class="w-7 h-7 rounded hover:bg-red-100 flex items-center justify-center text-error transition-colors" title="Remove STG-04" type="button">
+<span class="material-symbols-outlined text-[15px]">delete</span>
+</button>
+</div>
+</div>
+<div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-[10px] uppercase font-semibold">Secondary Packaging</span>
+<h2 class="font-headline-sm text-body-lg font-bold text-on-surface mt-1 leading-snug">Packing</h2>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-lg flex flex-col gap-1.5 text-body-sm">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-outline">Roles Allowed:</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate max-w-[110px]" title="Packaging Lead, Blister Operator">Pack Lead, Blister</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-outline">Remarks:</span>
+<span class="font-label-sm text-[10px] text-outline font-medium">Optional</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 font-label-sm text-[10px] font-bold">
+<span class="material-symbols-outlined text-[12px] text-emerald-700">check_circle</span> ACTIVE
+              </span>
+<span class="font-caption text-caption text-outline">Pos #4</span>
+</div>
+</div>
+<!-- CONNECTOR ARROW 4 -> 5 -->
+<div class="flex flex-col items-center justify-center px-1">
+<span class="font-label-sm text-[10px] font-mono font-medium text-secondary bg-surface-container px-2 py-0.5 rounded-full shadow-xs mb-1 text-center whitespace-nowrap">
+              Batch reconciliation
+            </span>
+<div class="flex items-center text-primary-container">
+<div class="w-10 h-0.5 bg-primary-container"></div>
+<span class="material-symbols-outlined text-[18px] -ml-2 text-primary-container">arrow_forward</span>
+</div>
+</div>
+<!-- STAGE 5 CARD (TERMINAL) -->
+<div class="w-60 bg-surface-container-low rounded-xl p-space-md flex flex-col gap-3 shadow-sm hover:shadow transition-all relative">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-outline cursor-grab active:cursor-grabbing">
+<span class="material-symbols-outlined text-[16px]">drag_indicator</span>
+<span class="font-label-sm text-label-sm font-mono font-bold text-primary">STG-05</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 rounded hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Edit STG-05" type="button">
+<span class="material-symbols-outlined text-[15px]">edit</span>
+</button>
+<div class="w-7 h-7 rounded bg-surface-container-high flex items-center justify-center text-outline cursor-not-allowed" title="Terminal stage cannot be deleted">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+</div>
+</div>
+</div>
+<div>
+<span class="px-2 py-0.5 rounded bg-purple-50 text-purple-900 font-label-sm text-[10px] uppercase font-semibold">Terminal / Release</span>
+<h2 class="font-headline-sm text-body-lg font-bold text-on-surface mt-1 leading-snug">Packed</h2>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-lg flex flex-col gap-1.5 text-body-sm">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-outline">Roles Allowed:</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate max-w-[110px]" title="QA Lead, Department HOD">QA Lead, HOD</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-outline">Remarks:</span>
+<span class="inline-flex items-center gap-1 text-emerald-800 font-label-sm text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-700"></span> Disposition Req
+                </span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-purple-100 text-purple-900 font-label-sm text-[10px] font-bold">
+<span class="material-symbols-outlined text-[12px] text-purple-700">flag</span> TERMINAL
+              </span>
+<span class="font-caption text-caption text-outline">Pos #5</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Dual Layout: Transition Matrix Table on Left, Docked Editor Drawer on Right -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Transition Matrix Table (8 Columns) -->
+<section class="lg:col-span-7 xl:col-span-8 bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-xs">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Stage Transition Matrix</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Configured downstream handoffs and authentication gates</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline font-mono">6 Permitted Paths</span>
+<button class="min-h-[44px] px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">add</span>
+<span>New Rule</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-caption uppercase tracking-wider">
+<th class="py-2.5 px-3 rounded-l-lg font-semibold">From Stage</th>
+<th class="py-2.5 px-3 font-semibold">To Stage</th>
+<th class="py-2.5 px-3 font-semibold">Allowed Roles</th>
+<th class="py-2.5 px-3 font-semibold">Transition Condition</th>
+<th class="py-2.5 px-3 rounded-r-lg font-semibold text-center">e-Sign Req.</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm font-semibold text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    STG-01 Filling complete
+                  </div>
+</td>
+<td class="py-3 px-3">
+<div class="font-label-sm text-label-sm font-semibold text-on-surface">STG-02 Cold room</div>
+</td>
+<td class="py-3 px-3">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Initiator, Packaging Lead</span>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-[11px] font-mono">Tare weight verified</span>
+</td>
+<td class="py-3 px-3 text-center">
+<label class="inline-flex items-center justify-center cursor-pointer min-h-[44px] min-w-[44px]">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-checked:bg-primary rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-3 after:w-3 after:transition-all relative"></div>
+</label>
+</td>
+</tr>
+<tr class="bg-primary/5 hover:bg-primary/10 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm font-semibold text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    STG-02 Cold room storage
+                  </div>
+</td>
+<td class="py-3 px-3">
+<div class="font-label-sm text-label-sm font-semibold text-on-surface">STG-03 Visual inspection</div>
+</td>
+<td class="py-3 px-3">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cold Room Operator</span>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-amber-50 text-amber-900 font-label-sm text-[11px] font-mono">Hold-time &lt; 60m</span>
+</td>
+<td class="py-3 px-3 text-center">
+<label class="inline-flex items-center justify-center cursor-pointer min-h-[44px] min-w-[44px]">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-checked:bg-primary rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-3 after:w-3 after:transition-all relative"></div>
+</label>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm font-semibold text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    STG-03 Visual inspection
+                  </div>
+</td>
+<td class="py-3 px-3">
+<div class="font-label-sm text-label-sm font-semibold text-on-surface">STG-04 Packing</div>
+</td>
+<td class="py-3 px-3">
+<span class="font-body-sm text-body-sm text-on-surface-variant">QA Inspector, Initiator</span>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-[11px] font-mono">0 AQL Rejections</span>
+</td>
+<td class="py-3 px-3 text-center">
+<label class="inline-flex items-center justify-center cursor-pointer min-h-[44px] min-w-[44px]">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-checked:bg-primary rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-3 after:w-3 after:transition-all relative"></div>
+</label>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm font-semibold text-error">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                    STG-03 Visual inspection
+                  </div>
+</td>
+<td class="py-3 px-3">
+<div class="font-label-sm text-label-sm font-semibold text-error">STG-02 Cold room (Re-check)</div>
+</td>
+<td class="py-3 px-3">
+<span class="font-body-sm text-body-sm text-on-surface-variant">QA Supervisor</span>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-[11px] font-mono">Deviation dev-09 open</span>
+</td>
+<td class="py-3 px-3 text-center">
+<label class="inline-flex items-center justify-center cursor-pointer min-h-[44px] min-w-[44px]">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-checked:bg-primary rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-3 after:w-3 after:transition-all relative"></div>
+</label>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm font-semibold text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    STG-04 Packing
+                  </div>
+</td>
+<td class="py-3 px-3">
+<div class="font-label-sm text-label-sm font-semibold text-on-surface">STG-05 Packed (Terminal)</div>
+</td>
+<td class="py-3 px-3">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Packaging Lead</span>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-[11px] font-mono">Yield 98.5% - 101.5%</span>
+</td>
+<td class="py-3 px-3 text-center">
+<label class="inline-flex items-center justify-center cursor-pointer min-h-[44px] min-w-[44px]">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-checked:bg-primary rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-3 after:w-3 after:transition-all relative"></div>
+</label>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm font-semibold text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                    STG-01 Filling complete
+                  </div>
+</td>
+<td class="py-3 px-3">
+<div class="font-label-sm text-label-sm font-semibold text-on-surface">STG-03 Visual inspection</div>
+</td>
+<td class="py-3 px-3">
+<span class="font-body-sm text-body-sm text-on-surface-variant">QA Manager ONLY</span>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-[11px] font-mono">Emergency Skip Flag</span>
+</td>
+<td class="py-3 px-3 text-center">
+<label class="inline-flex items-center justify-center cursor-pointer min-h-[44px] min-w-[44px]">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-checked:bg-primary rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-3 after:w-3 after:transition-all relative"></div>
+</label>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-surface-container text-on-surface-variant font-caption text-caption">
+<span>* Direct transitions are tracked and sealed using HMAC-SHA256 audit tokens.</span>
+<span class="font-mono">Part 11 Compliant Schema S22.4</span>
+</div>
+</section>
+<!-- Docked Card Drawer Preview: Edit Stage STG-02 (4 Columns) -->
+<aside class="lg:col-span-5 xl:col-span-4 bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">edit_note</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-tight">Edit Stage</span>
+<span class="font-label-sm text-label-sm font-mono text-primary font-bold">STG-02 Cold room storage</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-cyan-100 text-cyan-900 font-label-sm text-[11px] font-bold font-mono">ACTIVE NODE</span>
+</div>
+<form class="flex flex-col gap-space-md" onsubmit="event.preventDefault();">
+<!-- Stage Name Input -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface">Stage Name</label>
+<input class="h-9 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary" type="text" value="Cold room storage"/>
+</div>
+<!-- Stage Type Dropdown -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface">Stage Classification Type</label>
+<div class="relative">
+<select class="w-full h-9 px-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+<option selected="">Environmental Controlled (CR-01 / CR-02)</option>
+<option>Operational / Intake</option>
+<option>Quality In-process Check</option>
+<option>Secondary Packaging &amp; Labeling</option>
+<option>Terminal / Quarantine Release</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2 pointer-events-none text-outline text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Roles Allowed Multi-Select Chips -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface">Roles Allowed for Custody Handover</label>
+<div class="flex flex-wrap gap-1.5 p-2 bg-surface-container-low rounded-lg min-h-[64px] items-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-lowest text-primary font-label-sm text-[11px] font-semibold shadow-xs">
+                Cold Room Operator
+                <button class="text-outline hover:text-error ml-1 flex items-center" type="button">×</button>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-lowest text-primary font-label-sm text-[11px] font-semibold shadow-xs">
+                Initiator
+                <button class="text-outline hover:text-error ml-1 flex items-center" type="button">×</button>
+</span>
+<button class="px-2 py-1 rounded bg-surface-container-highest hover:bg-surface-container text-on-surface-variant font-label-sm text-[11px] font-medium flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span> Add Role
+              </button>
+</div>
+</div>
+<!-- Remarks Required Switch -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Remarks Required on Handover</span>
+<span class="font-caption text-caption text-on-surface-variant">Operator must record bin / probe ID scan</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer min-h-[44px] min-w-[44px] justify-center">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-checked:bg-primary rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all"></div>
+</label>
+</div>
+<!-- Allowed Downstream Transitions Checkboxes -->
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface">Allowed Downstream Transitions</label>
+<div class="flex flex-col gap-1.5 p-2.5 rounded-lg bg-surface-container-low">
+<label class="flex items-center gap-2.5 cursor-pointer min-h-[36px]">
+<input checked="" class="rounded text-primary focus:ring-primary w-4 h-4" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">STG-03 Visual inspection (Default Path)</span>
+</label>
+<label class="flex items-center gap-2.5 cursor-pointer min-h-[36px]">
+<input class="rounded text-primary focus:ring-primary w-4 h-4" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">STG-04 Packing (Bypass visual with deviation)</span>
+</label>
+<label class="flex items-center gap-2.5 cursor-pointer min-h-[36px]">
+<input class="rounded text-primary focus:ring-primary w-4 h-4" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">STG-01 Filling complete (Return for re-work)</span>
+</label>
+</div>
+</div>
+<!-- Drawer Action Buttons -->
+<div class="flex items-center gap-2 pt-2 border-t border-surface-container">
+<button class="flex-1 min-h-[44px] px-3 py-2 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-headline-sm text-body-md font-semibold transition-colors flex items-center justify-center gap-1.5 shadow-sm" type="submit">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>Update Stage</span>
+</button>
+<button class="min-h-[44px] px-3 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-headline-sm text-body-md font-medium transition-colors" type="button">
+              Cancel
+            </button>
+</div>
+</form>
+</aside>
+</div>
+</div>
+</div></main></div></body></html>

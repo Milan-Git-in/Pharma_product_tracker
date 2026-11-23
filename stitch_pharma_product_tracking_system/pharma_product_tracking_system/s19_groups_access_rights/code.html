@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-container": "#2f677e", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#38485d", "on-error": "#ffffff", "inverse-on-surface": "#eff1f3", "on-primary-fixed": "#001f2a", "outline-variant": "#bfc8cd", "error-container": "#ffdad6", "surface-container": "#eceef0", "on-primary-fixed-variant": "#004d65", "primary": "#00465c", "tertiary-container": "#49596f", "on-secondary-fixed": "#001f2a", "surface-container-high": "#e6e8ea", "on-tertiary": "#ffffff", "tertiary-fixed-dim": "#b7c8e1", "primary-container": "#0f5f7a", "on-background": "#191c1e", "primary-fixed-dim": "#8fcfee", "surface-bright": "#f7f9fb", "surface-container-highest": "#e0e3e5", "surface": "#f7f9fb", "tertiary-fixed": "#d3e4fe", "error": "#ba1a1a", "on-error-container": "#93000a", "on-primary-container": "#96d7f6", "on-surface-variant": "#40484d", "on-tertiary-container": "#bfd0ea", "tertiary": "#324257", "background": "#f7f9fb", "on-secondary-fixed-variant": "#0a4d63", "on-tertiary-fixed": "#0b1c30", "inverse-surface": "#2d3133", "outline": "#70787d", "secondary-fixed": "#bde9ff", "secondary-container": "#afe4ff", "secondary": "#2d657c", "secondary-fixed-dim": "#98cee8", "on-secondary": "#ffffff", "on-surface": "#191c1e", "surface-container-low": "#f2f4f6", "surface-tint": "#1b6681", "surface-variant": "#e0e3e5", "primary-fixed": "#bee9ff", "inverse-primary": "#8fcfee", "surface-dim": "#d8dadc", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-lg": "1.5rem", "margin-sm": "1rem", "margin": "1.5rem", "gutter": "1rem", "space-xs": "0.25rem", "space-xl": "2rem", "margin-lg": "2rem", "gutter-sm": "0.5rem", "space-sm": "0.5rem", "space-md": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "headline-md": [ "Inter" ], "caption": [ "Inter" ], "label-md": [ "JetBrains Mono" ], "label-lg": [ "JetBrains Mono" ], "headline-xl": [ "Inter" ], "label-sm": [ "JetBrains Mono" ], "headline-xl-mobile": [ "Inter" ], "body-lg": [ "Inter" ], "headline-sm": [ "Inter" ], "body-md": [ "Inter" ], "body-sm": [ "Inter" ], "headline-lg": [ "Inter" ] }, "fontSize": { "headline-md": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "caption": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "label-lg": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "headline-xl": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" } ], "headline-xl-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-lg": [ "15px", { "lineHeight": "22px", "fontWeight": "400" } ], "headline-sm": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "body-md": [ "13px", { "lineHeight": "20px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 bg-surface-container-lowest border-b border-outline-variant/40 z-50 px-margin flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><img alt="PTS Biopharma Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrC3TcaEYuwiUgXyGbJ_0ea6u5f7BAbpJToNmOK4Yar3kvzqYhgFl1EvVNqWLEiAR0tQqRhZ6JKV8-PfcfjvN8rJpKeZ0CWB7-IqGxEosR6dU_GAvlBEDmZSfAw7dnNtBhjygOdlJAuHn_tuRBSQje34EUN8tZLltAa0m8QMQFOZ6keu4WO3_hT46GuXZx603d1WmskAvzs7ZRaZorMJ_RPxF_E5EQJzp9ui5JjzSplP"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary font-semibold tracking-tight">Product Tracking System</span><span class="px-1.5 py-0.5 rounded bg-surface-container-low border border-outline-variant/50 font-label-sm text-label-sm text-on-surface-variant font-mono">PTS-GMP</span></div><span class="font-caption text-caption text-on-surface-variant">Company Pharmaceutical Limited • Biopharma Packing Division</span></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-2.5 py-1.5 rounded-lg bg-surface-container-low border border-outline-variant/40 font-label-md text-label-md text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-secondary">schedule</span><span>Server: 26/02/2025 14:38 UTC</span></div><div class="flex items-center gap-space-xs px-2.5 py-1.5 rounded-lg bg-error-container/40 border border-error/20 font-label-md text-label-md text-on-error-container font-mono"><span class="w-2 h-2 rounded-full bg-error animate-pulse"></span><span>Idle logoff: 24:18</span></div><div class="h-6 w-px bg-outline-variant/50"></div><button aria-label="Active Deviations and Alerts" class="min-h-[44px] min-w-[44px] relative flex items-center justify-center rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full bg-error text-on-error font-label-sm text-[10px] font-bold ring-2 ring-surface-container-lowest">3</span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-headline-sm text-body-md font-semibold text-on-surface">Anita Shah</span><div class="flex items-center justify-end gap-1"><span class="inline-flex items-center px-1.5 py-0.2 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[10px] uppercase font-semibold">Initiator</span><span class="font-caption text-[11px] text-on-surface-variant">Sec-L2</span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ring-2 ring-outline-variant/30"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-low border-r border-outline-variant/40 z-40 flex flex-col justify-between"><div class="flex flex-col h-full overflow-hidden"><div class="p-space-md border-b border-outline-variant/30"><label class="block font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-1">Operational Context</label><div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest border border-outline-variant/50 cursor-pointer min-h-[44px]"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[20px]">supervised_user_circle</span><div class="flex flex-col"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Packaging Lead</span><span class="font-label-sm text-[10px] text-on-surface-variant font-mono">Cleanroom Line 04</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">unfold_more</span></div></div><div class="flex-1 overflow-y-auto px-3 py-space-md space-y-4"><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><span class="px-3 font-caption text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Batch Core</span><a class="flex items-center px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="dashboard" href="#">Dashboard</a><a class="flex items-center px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="binders" href="#">Binders</a></nav><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><span class="px-3 font-caption text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Trace &amp; Environmental</span><a class="flex items-center px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="cold-rooms" href="#">Cold rooms</a><a class="flex items-center px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="scan" href="#">Scan &amp; Verify</a></nav><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><span class="px-3 font-caption text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Compliance &amp; Audit</span><a class="flex items-center px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="s12-reports-hub" href="#">Reports &amp; Audit</a><a class="flex items-center px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="electronic-signatures" href="#">Signatures Log</a><a class="flex items-center px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="s17-audit-trail-viewer" href="#">Audit Trail</a></nav><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><span class="px-3 font-caption text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Administration &amp; Security</span><a class="flex items-center px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="users" href="#">User Management</a><a aria-current="page" class="flex items-center px-3 py-2.5 min-h-[44px] transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="groups-permissions" href="#">Groups &amp; Access Rights</a></nav></div><div class="p-space-sm border-t border-outline-variant/30 bg-surface-container-lowest"><div class="flex items-center justify-between p-2 rounded-lg bg-surface-container border border-outline-variant/40"><div class="flex flex-col"><span class="font-caption text-[10px] text-on-surface-variant uppercase">GMP Status</span><span class="font-label-sm text-label-sm text-secondary font-semibold">21 CFR Part 11 Active</span></div><span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span></div></div><div class="bg-tertiary-container px-3 py-2.5 text-center flex items-center justify-center gap-1.5 border-t border-outline-variant/50"><span class="material-symbols-outlined text-tertiary-fixed text-[16px]">warning</span><span class="font-label-sm text-[11px] font-bold tracking-wider text-tertiary-fixed uppercase font-mono">PROTOTYPE – NOT VALIDATED</span></div></div></aside><div class="pl-64"><main class="w-full min-h-screen pt-16 px-gutter bg-surface"><div class="flex flex-col w-full pb-12">
+<!-- Top Level Metadata & Breadcrumb Header -->
+<div class="flex flex-col gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm font-mono">
+<span>GMP-SEC</span>
+<span>/</span>
+<span>RBAC-AUTHORITY</span>
+<span>/</span>
+<span class="text-primary font-semibold">21_CFR_11.10(g)</span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<h1 class="font-headline-xl text-headline-xl text-primary font-semibold tracking-tight">S19 Groups &amp; Access Rights</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Configure role-based access control (RBAC), electronic signature authorization tiers, and system privileges under 21 CFR §11.10(g).
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+          21 CFR §11.10(g) Authority Matrix
+        </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-semibold font-mono">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+          System Security Level: High
+        </span>
+</div>
+</div>
+</div>
+<!-- Audit Mandate Banner -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low shadow-sm p-space-md mb-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex items-start gap-space-md pl-space-xs">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">gavel</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Every change is audit-logged with a reason</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary font-mono font-medium">IMMUTABLE_LOG</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 max-w-4xl">
+          Any modification to group privileges or access permissions requires dual-custody re-authentication and is permanently written to the immutable audit trail with an explicit regulatory justification.
+        </p>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-surface-container-lowest text-primary font-headline-sm text-body-md font-semibold shadow-sm hover:bg-surface-container transition-all min-h-[44px] shrink-0 self-start md:self-auto" href="#">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>View Permission Audit History (S17)</span>
+</a>
+</div>
+<!-- Main Dual-Column Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- LEFT COLUMN: Groups List (4 Cols) -->
+<div class="lg:col-span-4 xl:col-span-3 flex flex-col gap-space-md">
+<!-- Section Title & Creation CTA -->
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">System Role Groups</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-mono">4 Active</span>
+</div>
+<button class="min-h-[44px] px-3 py-1.5 rounded-lg bg-primary text-on-primary font-headline-sm text-body-sm font-semibold flex items-center gap-1.5 shadow-sm hover:bg-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>New Group</span>
+</button>
+</div>
+<!-- Groups List -->
+<div class="flex flex-col gap-3" id="group-selection-list">
+<!-- 1. Admin Group (Selected) -->
+<div class="group-card relative p-space-md rounded-xl bg-surface-container-lowest shadow-sm cursor-pointer transition-all hover:bg-surface-container-low" data-group="admin">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary-container rounded-l-xl"></div>
+<div class="flex items-start justify-between mb-2 pl-2">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Admin</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-[10px] uppercase font-bold font-mono">Current</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-mono">
+<span class="material-symbols-outlined text-[14px]">group</span>
+              3 users
+            </span>
+</div>
+<span class="block font-caption text-caption text-secondary font-semibold pl-2 mb-1">System Administrator</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant pl-2 leading-relaxed">
+            Full system configuration, user provisioning, security parameters, backup routines.
+          </p>
+<div class="mt-3 pt-2 pl-2 flex items-center justify-between text-on-surface-variant font-label-sm text-[11px] font-mono">
+<span class="text-secondary font-semibold">Auth Level: TIER-01 (SUPER)</span>
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+</div>
+</div>
+<!-- 2. Initiator Group -->
+<div class="group-card relative p-space-md rounded-xl bg-surface-container-lowest shadow-sm cursor-pointer transition-all hover:bg-surface-container-low" data-group="initiator">
+<div class="flex items-start justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Initiator</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-mono">
+<span class="material-symbols-outlined text-[14px]">group</span>
+              18 users
+            </span>
+</div>
+<span class="block font-caption text-caption text-on-surface-variant font-semibold mb-1">Operational Cleanroom Leads</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Floor operators and cleanroom leads. Binder intake, physical movement execution, initial e-signature custody handover.
+          </p>
+<div class="mt-3 pt-2 flex items-center justify-between text-on-surface-variant font-label-sm text-[11px] font-mono">
+<span>Auth Level: TIER-04 (OPERATIONAL)</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</div>
+</div>
+<!-- 3. Department HOD Group -->
+<div class="group-card relative p-space-md rounded-xl bg-surface-container-lowest shadow-sm cursor-pointer transition-all hover:bg-surface-container-low" data-group="hod">
+<div class="flex items-start justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Department HOD</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-mono">
+<span class="material-symbols-outlined text-[14px]">group</span>
+              6 users
+            </span>
+</div>
+<span class="block font-caption text-caption text-on-surface-variant font-semibold mb-1">Head of Department</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Technical reviewers, deviation assessments, hold-time variance escalations.
+          </p>
+<div class="mt-3 pt-2 flex items-center justify-between text-on-surface-variant font-label-sm text-[11px] font-mono">
+<span>Auth Level: TIER-03 (MGMT)</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</div>
+</div>
+<!-- 4. QA Group -->
+<div class="group-card relative p-space-md rounded-xl bg-surface-container-lowest shadow-sm cursor-pointer transition-all hover:bg-surface-container-low" data-group="qa">
+<div class="flex items-start justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">QA</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-mono">
+<span class="material-symbols-outlined text-[14px]">group</span>
+              7 users
+            </span>
+</div>
+<span class="block font-caption text-caption text-on-surface-variant font-semibold mb-1">Quality Assurance</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Final release authorization, CAPA disposition, regulatory dossier locks, audit trail certification.
+          </p>
+<div class="mt-3 pt-2 flex items-center justify-between text-on-surface-variant font-label-sm text-[11px] font-mono">
+<span>Auth Level: TIER-02 (QUALITY_SIG)</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Active Group Policy Security Container -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-3 mt-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Active Group Policy</span>
+<span class="material-symbols-outlined text-primary text-[18px]">shield</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant">Global boundary constraints applied to this role tier.</p>
+<div class="flex flex-col gap-2 mt-1">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">sync</span>
+<span class="font-body-sm text-body-sm text-on-surface">Password Rotation</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold font-mono text-primary">90 days</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">timer</span>
+<span class="font-body-sm text-body-sm text-on-surface">Idle Screen Lock</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold font-mono text-primary">15 min</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-error">lock</span>
+<span class="font-body-sm text-body-sm text-on-surface">Lockout Threshold</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold font-mono text-error">3 attempts</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[10px] text-on-surface-variant font-mono">TOKEN_EXPIRY: 8_HRS</span>
+<span class="font-label-sm text-[10px] text-secondary font-mono font-semibold">MFA_ENFORCED</span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Permission Matrix (8-9 Cols) -->
+<div class="lg:col-span-8 xl:col-span-9 flex flex-col gap-space-md">
+<!-- Matrix Header Card -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">tune</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold" id="matrix-title">Permission Matrix — Admin Group</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Configure granular capability toggles for the selected group. Enabled permissions are cryptographically enforced at the API gateway.
+          </p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="min-h-[44px] px-4 py-2 rounded-lg bg-surface-container text-on-surface font-headline-sm text-body-md font-semibold hover:bg-surface-container-high transition-colors" id="discard-btn" type="button">
+            Discard Changes
+          </button>
+<button class="min-h-[44px] px-4 py-2 rounded-lg bg-primary text-on-primary font-headline-sm text-body-md font-semibold flex items-center gap-2 shadow-sm hover:bg-primary-container transition-colors" id="save-policy-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Save Policy Changes</span>
+</button>
+</div>
+</div>
+<!-- Matrix Table Card Container -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden flex flex-col">
+<!-- Sticky Table Control Bar -->
+<div class="px-space-md py-space-sm bg-surface-container-low flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-mono font-semibold uppercase tracking-wider">Module Privilege Matrix</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-mono">9 Modules Tracked</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant font-label-sm text-label-sm font-mono">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span>Enabled</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-surface-container-highest"></span>
+<span>Disabled</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-outline">lock</span>
+<span>CFR Locked</span>
+</div>
+</div>
+</div>
+<!-- Scrollable High Density Responsive Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-md text-label-md font-mono uppercase tracking-wider">
+<th class="py-3 px-space-md font-semibold">System Module / Resource</th>
+<th class="py-3 px-space-md font-semibold hidden md:table-cell">Scope / Compliance Note</th>
+<th class="py-3 px-space-sm text-center font-semibold">View</th>
+<th class="py-3 px-space-sm text-center font-semibold">Create</th>
+<th class="py-3 px-space-sm text-center font-semibold">Edit</th>
+<th class="py-3 px-space-sm text-center font-semibold">Export/Print</th>
+<th class="py-3 px-space-sm text-center font-semibold bg-surface-container-high">
+<div class="flex items-center justify-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[15px]">draw</span>
+<span>Sign</span>
+</div>
+</th>
+<th class="py-3 px-space-sm text-center font-semibold">Configure</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-sm text-body-sm text-on-surface">
+<!-- ROW 1: Binders -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">folder_managed</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">Binders</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">MOD_EBR_01</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant font-body-sm hidden md:table-cell">
+                  Electronic Batch Records &amp; dossiers
+                </td>
+<!-- View: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Create: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Edit: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Export/Print: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Sign: OFF (Admin does not sign batches per SOP) -->
+<td class="py-3 px-space-sm text-center bg-surface-container-low/40">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="false" type="button">
+<span class="w-9 h-5 rounded-full bg-surface-container-highest relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-0 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Configure: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+</tr>
+<!-- ROW 2: Movements -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">transfer_within_a_station</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">Movements</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">MOD_TRANS_02</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant font-body-sm hidden md:table-cell">
+                  Cold room transfer, load, unload staging
+                </td>
+<!-- View: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Create: OFF -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="false" type="button">
+<span class="w-9 h-5 rounded-full bg-surface-container-highest relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-0 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Edit: OFF -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="false" type="button">
+<span class="w-9 h-5 rounded-full bg-surface-container-highest relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-0 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Export/Print: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Sign: OFF -->
+<td class="py-3 px-space-sm text-center bg-surface-container-low/40">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="false" type="button">
+<span class="w-9 h-5 rounded-full bg-surface-container-highest relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-0 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Configure: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+</tr>
+<!-- ROW 3: Reports -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">analytics</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">Reports</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">MOD_REP_S12</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant font-body-sm hidden md:table-cell">
+                  Compliance dossiers, hold-time logs, S12/S15
+                </td>
+<!-- View: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Create: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Edit: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Export/Print: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Sign: OFF -->
+<td class="py-3 px-space-sm text-center bg-surface-container-low/40">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="false" type="button">
+<span class="w-9 h-5 rounded-full bg-surface-container-highest relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-0 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Configure: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+</tr>
+<!-- ROW 4: Audit Trail (LOCKED PER CFR §11.10(e)) -->
+<tr class="bg-surface-container-low/30 hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">history_edu</span>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">Audit trail</span>
+<span class="px-1.5 py-0.2 rounded bg-error-container text-on-error-container font-label-sm text-[9px] uppercase font-bold">21 CFR §11.10(e)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">MOD_AUDIT_S17</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant font-body-sm hidden md:table-cell">
+                  S17 Immutable ledger &amp; Merkle verification
+                </td>
+<!-- View: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Create: OFF (System automated only) -->
+<td class="py-3 px-space-sm text-center">
+<div class="min-w-[44px] min-h-[44px] inline-flex items-center justify-center text-outline-variant cursor-not-allowed" title="System automated only. Manual creation strictly prohibited.">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+</td>
+<!-- Edit: OFF (PERMANENTLY LOCKED) -->
+<td class="py-3 px-space-sm text-center">
+<div class="min-w-[44px] min-h-[44px] inline-flex flex-col items-center justify-center text-error cursor-not-allowed" title="Immutable by §11.10(e): Records cannot be modified or deleted.">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span class="font-label-sm text-[8px] font-mono font-bold leading-none mt-0.5">LOCKED</span>
+</div>
+</td>
+<!-- Export/Print: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Sign: OFF -->
+<td class="py-3 px-space-sm text-center bg-surface-container-low/40">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="false" type="button">
+<span class="w-9 h-5 rounded-full bg-surface-container-highest relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-0 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Configure: OFF (System Enforced) -->
+<td class="py-3 px-space-sm text-center">
+<div class="min-w-[44px] min-h-[44px] inline-flex items-center justify-center text-outline-variant cursor-not-allowed" title="Immutable Core Policy">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+</td>
+</tr>
+<!-- ROW 5: Users -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">manage_accounts</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">Users</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">MOD_USR_S18</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant font-body-sm hidden md:table-cell">
+                  S18 Directory &amp; account lifecycle
+                </td>
+<!-- View: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Create: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Edit: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Export/Print: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Sign: ON (Admin elevation re-auth) -->
+<td class="py-3 px-space-sm text-center bg-surface-container-low/40">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Configure: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+</tr>
+<!-- ROW 6: Masters -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">database</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">Masters</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">MOD_SPEC_06</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant font-body-sm hidden md:table-cell">
+                  Product formulations, specs, lot numbering schemes
+                </td>
+<!-- View: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Create: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Edit: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Export/Print: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Sign: ON -->
+<td class="py-3 px-space-sm text-center bg-surface-container-low/40">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Configure: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+</tr>
+<!-- ROW 7: Workflow -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">account_tree</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">Workflow</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">MOD_WFLOW_07</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant font-body-sm hidden md:table-cell">
+                  Stage limits, hold-time clock thresholds, SLA rules
+                </td>
+<!-- View: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Create: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Edit: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Export/Print: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Sign: ON -->
+<td class="py-3 px-space-sm text-center bg-surface-container-low/40">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Configure: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+</tr>
+<!-- ROW 8: Security -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">security</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">Security</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">MOD_SEC_08</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant font-body-sm hidden md:table-cell">
+                  Authentication policies, session timeouts, HSM keys
+                </td>
+<!-- View: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Create: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Edit: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Export/Print: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Sign: ON -->
+<td class="py-3 px-space-sm text-center bg-surface-container-low/40">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Configure: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+</tr>
+<!-- ROW 9: Backup -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">settings_backup_restore</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">Backup</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">MOD_BCKP_09</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant font-body-sm hidden md:table-cell">
+                  Cold disaster recovery, database snapshots, archive
+                </td>
+<!-- View: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Create: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Edit: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Export/Print: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Sign: ON -->
+<td class="py-3 px-space-sm text-center bg-surface-container-low/40">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+<!-- Configure: ON -->
+<td class="py-3 px-space-sm text-center">
+<button class="matrix-toggle min-w-[44px] min-h-[44px] inline-flex items-center justify-center p-2" data-state="true" type="button">
+<span class="w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5"><span class="w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs"></span></span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- Persistent Sticky Bottom Bar: Reason for Change Requirement -->
+<div class="mt-space-lg p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px] text-secondary">security_update_good</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Change Enforcement Status</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-mono" id="unsaved-badge">
+            Pending Modifications: 0 unsaved changes
+          </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Any adjustments will trigger mandatory S04 Re-authentication Dialog before persistence.
+        </span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low font-label-sm text-label-sm font-mono text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">key</span>
+<span>HMAC_SHA256_ACTIVE</span>
+</div>
+<button class="min-h-[44px] px-5 py-2.5 rounded-lg bg-primary text-on-primary font-headline-sm text-body-md font-semibold flex items-center gap-2 shadow-sm hover:bg-primary-container transition-colors disabled:opacity-50 disabled:cursor-not-allowed" id="trigger-reauth-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Re-authenticate &amp; Sign</span>
+</button>
+</div>
+</div>
+<!-- Interactive Mock Modal for Dual-Custody Signature (S04) -->
+<div class="fixed inset-0 z-50 bg-on-background/40 backdrop-blur-sm hidden flex items-center justify-center p-4" id="reauth-modal">
+<div class="w-full max-w-lg rounded-2xl bg-surface-container-lowest shadow-xl p-space-lg flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">fingerprint</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Dual-Custody Electronic Signature</h3>
+<span class="font-caption text-caption text-secondary font-mono">21 CFR §11.50 Compliant Signature Execution</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-on-surface-variant" id="close-modal-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container text-on-surface-variant font-body-sm leading-relaxed">
+        You are authorizing changes to the <span class="font-semibold text-primary">System Access Privileges</span>. Your identity, UTC timestamp, and justification will be recorded in the permanent audit ledger.
+      </div>
+<div class="flex flex-col gap-3">
+<div>
+<label class="block font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-1">Authenticated Signer</label>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low font-body-sm text-on-surface">
+<span>Anita Shah (Emp-ID: PTS-44821)</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">Sec-L2 Initiator</span>
+</div>
+</div>
+<div>
+<label class="block font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-1" for="change-reason">
+            Mandatory Regulatory Justification (Reason for Change) *
+          </label>
+<select class="w-full p-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-xs" id="change-reason">
+<option>CAPA-2025-081: Restrict movement edit permissions on Line 04</option>
+<option>SOP-REV-41: Periodic review of system administrative accounts</option>
+<option>INC-9012: Post-incident privilege minimization mandate</option>
+<option>Change Control CC-7721: Annual access validation cycle</option>
+</select>
+</div>
+<div>
+<label class="block font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-1" for="pass-confirm">
+            Password Confirmation *
+          </label>
+<input class="w-full p-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-xs" id="pass-confirm" placeholder="Enter cleanroom PIN or password" type="password"/>
+</div>
+</div>
+<div class="flex items-center justify-end gap-2 pt-2">
+<button class="min-h-[44px] px-4 py-2 rounded-lg bg-surface-container text-on-surface font-headline-sm text-body-md font-semibold hover:bg-surface-container-high transition-colors" id="cancel-modal-btn" type="button">
+          Cancel
+        </button>
+<button class="min-h-[44px] px-5 py-2 rounded-lg bg-primary text-on-primary font-headline-sm text-body-md font-semibold flex items-center gap-2 shadow-sm hover:bg-primary-container transition-colors" id="confirm-signature-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Sign &amp; Persist Changes</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initGroupsAccessRights() {
+    let pendingChangesCount = 0;
+    const unsavedBadge = document.getElementById('unsaved-badge');
+    const triggerReauthBtn = document.getElementById('trigger-reauth-btn');
+    const savePolicyBtn = document.getElementById('save-policy-btn');
+    const discardBtn = document.getElementById('discard-btn');
+    const modal = document.getElementById('reauth-modal');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const cancelModalBtn = document.getElementById('cancel-modal-btn');
+    const confirmSignatureBtn = document.getElementById('confirm-signature-btn');
+    const matrixTitle = document.getElementById('matrix-title');
+    const groupCards = document.querySelectorAll('.group-card');
+    const toggles = document.querySelectorAll('.matrix-toggle');
+
+    function updateChangeTracker() {
+      if (pendingChangesCount > 0) {
+        unsavedBadge.textContent = 'Pending Modifications: ' + pendingChangesCount + ' unsaved changes';
+        unsavedBadge.className = 'px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-mono font-semibold animate-pulse';
+        triggerReauthBtn.removeAttribute('disabled');
+      } else {
+        unsavedBadge.textContent = 'Pending Modifications: 0 unsaved changes';
+        unsavedBadge.className = 'px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-mono';
+      }
+    }
+
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', function() {
+        const isCurrentOn = this.getAttribute('data-state') === 'true';
+        const newState = !isCurrentOn;
+        this.setAttribute('data-state', newState ? 'true' : 'false');
+
+        const trackSpan = this.querySelector('span');
+        const knobSpan = trackSpan.querySelector('span');
+
+        if (newState) {
+          trackSpan.className = 'w-9 h-5 rounded-full bg-primary relative transition-colors flex items-center p-0.5';
+          knobSpan.className = 'w-4 h-4 rounded-full bg-surface-container-lowest translate-x-4 transition-transform shadow-xs';
+        } else {
+          trackSpan.className = 'w-9 h-5 rounded-full bg-surface-container-highest relative transition-colors flex items-center p-0.5';
+          knobSpan.className = 'w-4 h-4 rounded-full bg-surface-container-lowest translate-x-0 transition-transform shadow-xs';
+        }
+
+        pendingChangesCount++;
+        updateChangeTracker();
+      });
+    });
+
+    groupCards.forEach(card => {
+      card.addEventListener('click', function() {
+        groupCards.forEach(c => {
+          c.classList.remove('bg-surface-container-lowest');
+          c.classList.add('bg-surface-container-lowest');
+          const indicator = c.querySelector('.bg-primary-container');
+          if (indicator && indicator.classList.contains('absolute')) {
+            indicator.remove();
+          }
+          const check = c.querySelector('.material-symbols-outlined.text-primary');
+          if (check && check.textContent.trim() === 'check_circle') {
+            check.textContent = 'chevron_right';
+            check.className = 'material-symbols-outlined text-on-surface-variant text-[18px]';
+          }
+          const badge = c.querySelector('span.uppercase');
+          if (badge && badge.textContent === 'CURRENT') {
+            badge.remove();
+          }
+        });
+
+        const activeIndicator = document.createElement('div');
+        activeIndicator.className = 'absolute left-0 top-0 bottom-0 w-1.5 bg-primary-container rounded-l-xl';
+        this.prepend(activeIndicator);
+
+        const icon = this.querySelector('.material-symbols-outlined:last-child');
+        if (icon) {
+          icon.textContent = 'check_circle';
+          icon.className = 'material-symbols-outlined text-primary text-[18px]';
+        }
+
+        const groupName = this.querySelector('.font-headline-sm').textContent.trim();
+        matrixTitle.textContent = 'Permission Matrix — ' + groupName + ' Group';
+      });
+    });
+
+    function openModal() {
+      modal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+    }
+
+    triggerReauthBtn.addEventListener('click', openModal);
+    savePolicyBtn.addEventListener('click', openModal);
+    closeModalBtn.addEventListener('click', closeModal);
+    cancelModalBtn.addEventListener('click', closeModal);
+
+    discardBtn.addEventListener('click', function() {
+      pendingChangesCount = 0;
+      updateChangeTracker();
+    });
+
+    confirmSignatureBtn.addEventListener('click', function() {
+      confirmSignatureBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Verifying Credentials...</span>';
+      setTimeout(() => {
+        confirmSignatureBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done</span><span>Signed & Sealed</span>';
+        setTimeout(() => {
+          pendingChangesCount = 0;
+          updateChangeTracker();
+          closeModal();
+          confirmSignatureBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">verified_user</span><span>Sign & Persist Changes</span>';
+        }, 600);
+      }, 700);
+    });
+  })();
+</script></main></div></body></html>

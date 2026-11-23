@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-variant": "#e0e3e5", "on-secondary": "#ffffff", "tertiary": "#324257", "secondary-fixed-dim": "#98cee8", "secondary": "#2d657c", "on-background": "#191c1e", "on-secondary-fixed-variant": "#0a4d63", "primary-fixed": "#bee9ff", "error-container": "#ffdad6", "outline-variant": "#bfc8cd", "on-error": "#ffffff", "surface-dim": "#d8dadc", "surface-container-highest": "#e0e3e5", "on-surface-variant": "#40484d", "surface-container-low": "#f2f4f6", "outline": "#70787d", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "secondary-container": "#afe4ff", "surface-bright": "#f7f9fb", "primary-fixed-dim": "#8fcfee", "on-error-container": "#93000a", "tertiary-fixed-dim": "#b7c8e1", "error": "#ba1a1a", "inverse-primary": "#8fcfee", "on-surface": "#191c1e", "surface": "#f7f9fb", "secondary-fixed": "#bde9ff", "tertiary-container": "#49596f", "inverse-surface": "#2d3133", "on-secondary-container": "#2f677e", "on-primary-fixed": "#001f2a", "inverse-on-surface": "#eff1f3", "surface-container": "#eceef0", "on-tertiary-fixed": "#0b1c30", "primary-container": "#0f5f7a", "on-tertiary-fixed-variant": "#38485d", "surface-container-high": "#e6e8ea", "background": "#f7f9fb", "on-tertiary": "#ffffff", "on-primary-container": "#96d7f6", "on-primary-fixed-variant": "#004d65", "surface-tint": "#1b6681", "on-secondary-fixed": "#001f2a", "tertiary-fixed": "#d3e4fe", "primary": "#00465c", "on-tertiary-container": "#bfd0ea" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1.5rem", "space-lg": "1.5rem", "margin-sm": "1rem", "space-xl": "2rem", "gutter": "1rem", "gutter-sm": "0.5rem", "space-xs": "0.25rem", "margin-lg": "2rem", "space-sm": "0.5rem", "gutter-lg": "1.5rem", "space-md": "1rem" }, "fontFamily": { "body-sm": [ "Inter" ], "caption": [ "Inter" ], "label-md": [ "JetBrains Mono" ], "headline-lg": [ "Inter" ], "headline-xl-mobile": [ "Inter" ], "label-sm": [ "JetBrains Mono" ], "body-md": [ "Inter" ], "body-lg": [ "Inter" ], "headline-sm": [ "Inter" ], "label-lg": [ "JetBrains Mono" ], "headline-xl": [ "Inter" ], "headline-md": [ "Inter" ] }, "fontSize": { "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "caption": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "headline-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-xl-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" } ], "body-md": [ "13px", { "lineHeight": "20px", "fontWeight": "400" } ], "body-lg": [ "15px", { "lineHeight": "22px", "fontWeight": "400" } ], "headline-sm": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "label-lg": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "headline-xl": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "headline-md": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 bg-surface-container-lowest border-b border-outline-variant/40 z-50 px-margin flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><img alt="PTS Biopharma Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrC3TcaEYuwiUgXyGbJ_0ea6u5f7BAbpJToNmOK4Yar3kvzqYhgFl1EvVNqWLEiAR0tQqRhZ6JKV8-PfcfjvN8rJpKeZ0CWB7-IqGxEosR6dU_GAvlBEDmZSfAw7dnNtBhjygOdlJAuHn_tuRBSQje34EUN8tZLltAa0m8QMQFOZ6keu4WO3_hT46GuXZx603d1WmskAvzs7ZRaZorMJ_RPxF_E5EQJzp9ui5JjzSplP"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary font-semibold tracking-tight">Product Tracking System</span><span class="px-1.5 py-0.5 rounded bg-surface-container-low border border-outline-variant/50 font-label-sm text-label-sm text-on-surface-variant font-mono">PTS-GMP</span></div><span class="font-caption text-caption text-on-surface-variant">Company Pharmaceutical Limited • Biopharma Packing Division</span></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-2.5 py-1.5 rounded-lg bg-surface-container-low border border-outline-variant/40 font-label-md text-label-md text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-secondary">schedule</span><span>Server: 26/02/2025 14:38 UTC</span></div><div class="flex items-center gap-space-xs px-2.5 py-1.5 rounded-lg bg-error-container/40 border border-error/20 font-label-md text-label-md text-on-error-container font-mono"><span class="w-2 h-2 rounded-full bg-error animate-pulse"></span><span>Idle logoff: 24:18</span></div><div class="h-6 w-px bg-outline-variant/50"></div><button aria-label="Active Deviations and Alerts" class="min-h-[44px] min-w-[44px] relative flex items-center justify-center rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full bg-error text-on-error font-label-sm text-[10px] font-bold ring-2 ring-surface-container-lowest">3</span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-headline-sm text-body-md font-semibold text-on-surface">Anita Shah</span><div class="flex items-center justify-end gap-1"><span class="inline-flex items-center px-1.5 py-0.2 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[10px] uppercase font-semibold">Initiator</span><span class="font-caption text-[11px] text-on-surface-variant">Sec-L2</span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ring-2 ring-outline-variant/30"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-low border-r border-outline-variant/40 z-40 flex flex-col justify-between"><div class="flex flex-col h-full overflow-hidden"><div class="p-space-md border-b border-outline-variant/30"><label class="block font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-1">Operational Context</label><div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest border border-outline-variant/50 cursor-pointer min-h-[44px]"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[20px]">supervised_user_circle</span><div class="flex flex-col"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Packaging Lead</span><span class="font-label-sm text-[10px] text-on-surface-variant font-mono">Cleanroom Line 04</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">unfold_more</span></div></div><div class="flex-1 overflow-y-auto px-3 py-space-md space-y-4"><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><span class="px-3 font-caption text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Batch Core</span><a class="flex items-center px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="dashboard" href="#">Dashboard</a><a class="flex items-center px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="binders" href="#">Binders</a></nav><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><span class="px-3 font-caption text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Trace &amp; Environmental</span><a class="flex items-center px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="cold-rooms" href="#">Cold rooms</a><a class="flex items-center px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="scan" href="#">Scan &amp; Verify</a></nav><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><span class="px-3 font-caption text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Compliance &amp; Audit</span><a class="flex items-center px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="s12-reports-hub" href="#">Reports &amp; Audit</a><a class="flex items-center px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="electronic-signatures" href="#">Signatures Log</a><a aria-current="page" class="flex items-center px-3 py-2.5 min-h-[44px] transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="s17-audit-trail-viewer" href="#">Audit Trail</a></nav></div><div class="p-space-sm border-t border-outline-variant/30 bg-surface-container-lowest"><div class="flex items-center justify-between p-2 rounded-lg bg-surface-container border border-outline-variant/40"><div class="flex flex-col"><span class="font-caption text-[10px] text-on-surface-variant uppercase">GMP Status</span><span class="font-label-sm text-label-sm text-secondary font-semibold">21 CFR Part 11 Active</span></div><span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span></div></div><div class="bg-tertiary-container px-3 py-2.5 text-center flex items-center justify-center gap-1.5 border-t border-outline-variant/50"><span class="material-symbols-outlined text-tertiary-fixed text-[16px]">warning</span><span class="font-label-sm text-[11px] font-bold tracking-wider text-tertiary-fixed uppercase font-mono">PROTOTYPE – NOT VALIDATED</span></div></div></aside><div class="pl-64"><main class="w-full min-h-screen pt-16 px-gutter bg-surface"><div class="flex flex-col w-full pb-12">
+<!-- Top Regulatory & Integrity Banner -->
+<div class="flex items-center justify-between px-space-md py-2.5 bg-surface-container rounded-lg mb-4 text-on-surface shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px]">lock</span>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-sm text-label-sm text-primary font-mono uppercase tracking-wider font-semibold">21 CFR § 11.10(e) Mandate:</span>
+<span class="font-body-md text-body-md text-on-surface-variant">The audit trail is read-only, continuously generated, and cannot be switched off or modified.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 pl-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+        Chain Intact (SHA-256 Validated · Zero Breakages)
+      </span>
+<span class="font-label-sm text-caption text-on-surface-variant font-mono hidden lg:inline">Validated: 26/02/2025 14:38:00 UTC</span>
+</div>
+</div>
+<!-- Header Section -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6">
+<div class="flex flex-col">
+<div class="flex items-center gap-3 mb-1">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">S17 Audit Trail Viewer</h1>
+<span class="px-2.5 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold font-mono tracking-wide">
+          21 CFR §11.10(e) Immutable Ledger
+        </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-caption font-mono">
+          EU GMP Annex 11 §9
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Complete time-sequenced record of operator interventions, custody transfers, and system events.
+      </p>
+</div>
+<!-- Action Toolbar -->
+<div class="flex items-center gap-space-sm flex-wrap shrink-0">
+<div class="relative inline-block text-left" id="exportDropdown">
+<button class="min-h-[44px] px-3.5 py-2 rounded-lg bg-surface-container-lowest text-primary font-headline-sm text-body-md font-semibold flex items-center gap-2 shadow-sm hover:bg-surface-container transition-colors" onclick="toggleDropdown()" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+          Export CSV / JSON
+          <span class="material-symbols-outlined text-[16px]">arrow_drop_down</span>
+</button>
+<div class="hidden absolute right-0 mt-1 w-44 rounded-lg bg-surface-container-lowest shadow-md z-30 py-1" id="exportMenu">
+<a class="flex items-center gap-2 px-4 py-2 font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low min-h-[40px]" href="#">
+<span class="material-symbols-outlined text-[16px] text-secondary">table_view</span> CSV Ledger (.csv)
+          </a>
+<a class="flex items-center gap-2 px-4 py-2 font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low min-h-[40px]" href="#">
+<span class="material-symbols-outlined text-[16px] text-secondary">data_object</span> Cryptographic JSON
+          </a>
+<a class="flex items-center gap-2 px-4 py-2 font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low min-h-[40px]" href="#">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span> Signed XML Ledger
+          </a>
+</div>
+</div>
+<button class="min-h-[44px] px-3.5 py-2 rounded-lg bg-surface-container-lowest text-primary font-headline-sm text-body-md font-semibold flex items-center gap-2 shadow-sm hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+        Print Ledger
+      </button>
+<button class="min-h-[44px] px-4 py-2 rounded-lg bg-primary text-on-primary font-headline-sm text-body-md font-semibold flex items-center gap-2 shadow-sm hover:bg-primary-container transition-colors" id="verifyBtn" onclick="runVerification()" type="button">
+<span class="material-symbols-outlined text-[18px]" id="verifyIcon">verified_user</span>
+<span id="verifyText">Verify Integrity</span>
+</button>
+</div>
+</div>
+<!-- Two-Tier Cleanroom Filter Panel -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-4 mb-6 flex flex-col gap-4">
+<!-- Tier 1: Time, User, Lot, Batch Controls -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-3 items-end">
+<!-- Date Range -->
+<div class="lg:col-span-4 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-caption text-caption uppercase text-on-surface-variant tracking-wider font-semibold">Timestamp Window (UTC)</label>
+<div class="flex items-center gap-1">
+<button class="font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface" type="button">24h</button>
+<button class="font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface" type="button">7D</button>
+<button class="font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-primary-container text-on-primary-container font-semibold" type="button">Shift</button>
+<button class="font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface" type="button">MTD</button>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low rounded-lg px-2.5 py-1 min-h-[44px]">
+<span class="material-symbols-outlined text-secondary text-[18px]">calendar_clock</span>
+<input class="w-full bg-transparent font-label-md text-label-md text-on-surface focus:outline-none" type="text" value="26/02/2025 06:00:00"/>
+<span class="text-on-surface-variant font-label-sm text-caption">to</span>
+<input class="w-full bg-transparent font-label-md text-label-md text-on-surface focus:outline-none text-right" type="text" value="26/02/2025 14:38:12"/>
+</div>
+</div>
+<!-- User Dropdown -->
+<div class="lg:col-span-3 flex flex-col gap-1.5">
+<label class="font-caption text-caption uppercase text-on-surface-variant tracking-wider font-semibold">Operator / System User</label>
+<div class="relative">
+<select class="w-full min-h-[44px] bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg px-3 pr-8 appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+<option>All Users (Operator, QA &amp; SCADA)</option>
+<option selected="">Anita Shah (USR-INIT-104)</option>
+<option>Dr. Marcus Vance (USR-HOD-201)</option>
+<option>Elena Rostova (USR-QA-305)</option>
+<option>System / SCADA Core Service</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Product Filter -->
+<div class="lg:col-span-2 flex flex-col gap-1.5">
+<label class="font-caption text-caption uppercase text-on-surface-variant tracking-wider font-semibold">Target Product</label>
+<div class="relative">
+<select class="w-full min-h-[44px] bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg px-3 pr-8 appearance-none focus:outline-none focus:ring-2 focus:ring-primary">
+<option>All Products</option>
+<option selected="">Insulin Glargine 100 IU/mL</option>
+<option>Filgrastim 300 mcg/0.5 mL</option>
+<option>Adalimumab 40 mg/0.8 mL</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Lot & Batch Monospace Inputs -->
+<div class="lg:col-span-3 grid grid-cols-2 gap-2">
+<div class="flex flex-col gap-1.5">
+<label class="font-caption text-caption uppercase text-on-surface-variant tracking-wider font-semibold">Lot No.</label>
+<input class="w-full min-h-[44px] bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg px-3 focus:outline-none focus:ring-2 focus:ring-primary uppercase" placeholder="LT-XXXXX" type="text" value="LT-26A017"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-caption text-caption uppercase text-on-surface-variant tracking-wider font-semibold">Batch No.</label>
+<input class="w-full min-h-[44px] bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg px-3 focus:outline-none focus:ring-2 focus:ring-primary uppercase" placeholder="BXXXXXX" type="text" value="B260117"/>
+</div>
+</div>
+</div>
+<!-- Tier 2: Action Type Chips & Form Submissions -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3 pt-3 bg-surface-container-low rounded-lg p-2.5">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-caption text-caption uppercase text-on-surface-variant font-semibold tracking-wider mr-1">Action Type:</span>
+<!-- Login -->
+<label class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface text-label-sm font-label-sm cursor-pointer select-none min-h-[36px] shadow-sm hover:bg-surface-bright">
+<input checked="" class="rounded text-primary focus:ring-0 accent-primary" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+          Login
+        </label>
+<!-- Failed Login -->
+<label class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-error-container/40 text-on-error-container text-label-sm font-label-sm cursor-pointer select-none min-h-[36px] shadow-sm">
+<input checked="" class="rounded text-error focus:ring-0 accent-error" type="checkbox"/>
+<span class="material-symbols-outlined text-[13px] text-error">warning</span>
+          Failed Login
+        </label>
+<!-- Auto Log-off -->
+<label class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface text-label-sm font-label-sm cursor-pointer select-none min-h-[36px] shadow-sm hover:bg-surface-bright">
+<input checked="" class="rounded text-primary focus:ring-0 accent-primary" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+          Auto Log-off
+        </label>
+<!-- Create -->
+<label class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface text-label-sm font-label-sm cursor-pointer select-none min-h-[36px] shadow-sm hover:bg-surface-bright">
+<input checked="" class="rounded text-primary focus:ring-0 accent-primary" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+          Create
+        </label>
+<!-- Modify -->
+<label class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface text-label-sm font-label-sm cursor-pointer select-none min-h-[36px] shadow-sm hover:bg-surface-bright">
+<input checked="" class="rounded text-primary focus:ring-0 accent-primary" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+          Modify
+        </label>
+<!-- User Mgmt -->
+<label class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface text-label-sm font-label-sm cursor-pointer select-none min-h-[36px] shadow-sm hover:bg-surface-bright">
+<input checked="" class="rounded text-primary focus:ring-0 accent-primary" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+          User Mgmt
+        </label>
+<!-- Role / Rights -->
+<label class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface text-label-sm font-label-sm cursor-pointer select-none min-h-[36px] shadow-sm hover:bg-surface-bright">
+<input checked="" class="rounded text-primary focus:ring-0 accent-primary" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+          Role / Rights
+        </label>
+<!-- Signature -->
+<label class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-secondary-container text-on-secondary-container text-label-sm font-label-sm cursor-pointer select-none min-h-[36px] shadow-sm">
+<input checked="" class="rounded text-primary focus:ring-0 accent-primary" type="checkbox"/>
+<span class="material-symbols-outlined text-[13px]">key</span>
+          Signature
+        </label>
+</div>
+<div class="flex items-center gap-2 self-end lg:self-center shrink-0">
+<button class="min-h-[44px] px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-headline-sm text-body-md font-semibold transition-colors" type="button">
+          Reset Filters
+        </button>
+<button class="min-h-[44px] px-4 py-2 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-headline-sm text-body-md font-semibold flex items-center gap-1.5 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">filter_alt</span>
+          Apply Filters (142 Records)
+        </button>
+</div>
+</div>
+</div>
+<!-- Audit Trail Table Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col mb-4">
+<!-- Live Ledger Verification Subheader -->
+<div class="px-space-md py-2.5 bg-surface-container-low flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1.5 font-semibold text-primary">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          Live Stream Active
+        </span>
+<span class="text-outline-variant font-mono">|</span>
+<span class="font-mono text-caption">Cryptographic Ledger Sequence: #884,912 – #885,054</span>
+</div>
+<div class="flex items-center gap-2 font-mono text-caption">
+<span class="material-symbols-outlined text-[15px] text-secondary">fingerprint</span>
+        Root Node: <span class="text-on-surface font-semibold">0x7fa2...90bc</span>
+</div>
+</div>
+<!-- Data Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-caption text-caption uppercase tracking-wider">
+<th class="py-3 px-4 font-semibold shrink-0">Timestamp (UTC)</th>
+<th class="py-3 px-4 font-semibold">User &amp; Credential</th>
+<th class="py-3 px-3 font-semibold">Action</th>
+<th class="py-3 px-4 font-semibold">Target Record</th>
+<th class="py-3 px-4 font-semibold">Field / Parameter</th>
+<th class="py-3 px-4 font-semibold">Previous Value</th>
+<th class="py-3 px-4 font-semibold">New Value</th>
+<th class="py-3 px-4 font-semibold min-w-[260px]">Regulatory Justification (GMP Reason)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-md text-body-md text-on-surface">
+<!-- Row 1: Signature -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-3 px-4 font-label-md text-label-md whitespace-nowrap text-on-surface">
+<span class="font-semibold">26/02/2025</span>
+<span class="text-on-surface-variant text-caption">14:38:12 UTC</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-primary">Anita Shah</span>
+<span class="font-label-sm text-caption text-on-surface-variant font-mono">USR-INIT-104 • Line 04 Lead</span>
+</div>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-caption font-semibold">
+<span class="material-symbols-outlined text-[13px]">key</span>
+                Signature
+              </span>
+</td>
+<td class="py-3 px-4 font-label-md text-label-md font-mono text-primary font-semibold">
+              BND-2025-081
+            </td>
+<td class="py-3 px-4 font-body-sm text-body-sm text-on-surface-variant">
+              Signature Manifest
+            </td>
+<td class="py-3 px-4 font-label-sm text-caption text-on-surface-variant font-mono line-through opacity-70">
+              PENDING_OPERATOR_SIGN
+            </td>
+<td class="py-3 px-4">
+<span class="font-label-sm text-caption text-primary font-mono font-semibold px-1.5 py-0.5 rounded bg-primary-fixed">
+                SIGNED_21CFR11_AUTH
+              </span>
+</td>
+<td class="py-3 px-4 font-body-sm text-body-sm">
+<div class="flex items-start gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-secondary shrink-0 mt-0.5">verified</span>
+<span>Secondary packaging reconciliation approval per SOP-PTS-041. Attestation hash generated.</span>
+</div>
+</td>
+</tr>
+<!-- Row 2: Modify / Custody Location -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-3 px-4 font-label-md text-label-md whitespace-nowrap text-on-surface">
+<span class="font-semibold">26/02/2025</span>
+<span class="text-on-surface-variant text-caption">14:32:05 UTC</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-primary">Anita Shah</span>
+<span class="font-label-sm text-caption text-on-surface-variant font-mono">USR-INIT-104 • Line 04 Lead</span>
+</div>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Modify
+              </span>
+</td>
+<td class="py-3 px-4 font-label-md text-label-md font-mono text-primary font-semibold">
+              Lot LT-26A017
+            </td>
+<td class="py-3 px-4 font-body-sm text-body-sm text-on-surface-variant">
+              Storage Location
+            </td>
+<td class="py-3 px-4 font-label-sm text-caption text-on-surface-variant font-mono line-through opacity-70">
+              Filling Buffer Line 04
+            </td>
+<td class="py-3 px-4">
+<span class="font-label-sm text-caption text-on-secondary-container font-mono font-semibold px-1.5 py-0.5 rounded bg-secondary-container">
+                CR-01 (Shelf S-02)
+              </span>
+</td>
+<td class="py-3 px-4 font-body-sm text-body-sm">
+              Standard cold room intake per SOP-PTS-041. Temperature data-logger calibrated and tied.
+            </td>
+</tr>
+<!-- Row 3: Modify / Custody Stage -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-3 px-4 font-label-md text-label-md whitespace-nowrap text-on-surface">
+<span class="font-semibold">26/02/2025</span>
+<span class="text-on-surface-variant text-caption">14:15:40 UTC</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-primary">Anita Shah</span>
+<span class="font-label-sm text-caption text-on-surface-variant font-mono">USR-INIT-104 • Line 04 Lead</span>
+</div>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Modify
+              </span>
+</td>
+<td class="py-3 px-4 font-label-md text-label-md font-mono text-primary font-semibold">
+              BND-2025-081
+            </td>
+<td class="py-3 px-4 font-body-sm text-body-sm text-on-surface-variant">
+              Custody Stage
+            </td>
+<td class="py-3 px-4 font-label-sm text-caption text-on-surface-variant font-mono line-through opacity-70">
+              In Packaging
+            </td>
+<td class="py-3 px-4">
+<span class="font-label-sm text-caption text-primary font-mono font-semibold px-1.5 py-0.5 rounded bg-surface-container-high">
+                In Visual Inspection
+              </span>
+</td>
+<td class="py-3 px-4 font-body-sm text-body-sm">
+              Routine batch step progression post vial integrity testing.
+            </td>
+</tr>
+<!-- Row 4: Create / Rack Assignment -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-3 px-4 font-label-md text-label-md whitespace-nowrap text-on-surface">
+<span class="font-semibold">26/02/2025</span>
+<span class="text-on-surface-variant text-caption">13:58:22 UTC</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-primary">System / SCADA</span>
+<span class="font-label-sm text-caption text-on-surface-variant font-mono">SRV-DAEMON-01 • Automated</span>
+</div>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>
+                Create
+              </span>
+</td>
+<td class="py-3 px-4 font-label-md text-label-md font-mono text-primary font-semibold">
+              Rack RK-CR01-001
+            </td>
+<td class="py-3 px-4 font-body-sm text-body-sm text-on-surface-variant">
+              RFID Container Binding
+            </td>
+<td class="py-3 px-4 font-label-sm text-caption text-on-surface-variant font-mono italic opacity-60">
+              [Null / Unbound]
+            </td>
+<td class="py-3 px-4">
+<span class="font-label-sm text-caption text-primary font-mono font-semibold px-1.5 py-0.5 rounded bg-surface-container-high">
+                TAG:0x994821FF
+              </span>
+</td>
+<td class="py-3 px-4 font-body-sm text-body-sm">
+              Automatic RFID tag registration via portal scanner 4A upon chamber entry.
+            </td>
+</tr>
+<!-- Row 5: Role / Rights Change -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-3 px-4 font-label-md text-label-md whitespace-nowrap text-on-surface">
+<span class="font-semibold">26/02/2025</span>
+<span class="text-on-surface-variant text-caption">12:11:04 UTC</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-primary">Dr. Marcus Vance</span>
+<span class="font-label-sm text-caption text-on-surface-variant font-mono">USR-HOD-201 • Head of Ops</span>
+</div>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary font-label-sm text-caption font-semibold">
+<span class="material-symbols-outlined text-[13px]">shield_person</span>
+                Role/rights
+              </span>
+</td>
+<td class="py-3 px-4 font-label-md text-label-md font-mono text-primary font-semibold">
+              Elena Rostova
+            </td>
+<td class="py-3 px-4 font-body-sm text-body-sm text-on-surface-variant">
+              User Role Assignment
+            </td>
+<td class="py-3 px-4 font-label-sm text-caption text-on-surface-variant font-mono line-through opacity-70">
+              Level 2 - Operator
+            </td>
+<td class="py-3 px-4">
+<span class="font-label-sm text-caption text-on-primary-container font-mono font-semibold px-1.5 py-0.5 rounded bg-primary-container">
+                Level 3 - Approver
+              </span>
+</td>
+<td class="py-3 px-4 font-body-sm text-body-sm">
+              Scheduled shift handover and qualified replacement for Senior QA signoff authority.
+            </td>
+</tr>
+<!-- Row 6: Failed Login Deviation -->
+<tr class="hover:bg-error-container/20 transition-colors group bg-error-container/10">
+<td class="py-3 px-4 font-label-md text-label-md whitespace-nowrap text-error">
+<span class="font-semibold">26/02/2025</span>
+<span class="text-on-surface-variant text-caption">11:04:19 UTC</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-error">Unknown / Terminal 04</span>
+<span class="font-label-sm text-caption text-on-surface-variant font-mono">IP: 192.168.12.84 • Panel PC</span>
+</div>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-caption font-semibold">
+<span class="material-symbols-outlined text-[13px] text-error">warning</span>
+                Failed login
+              </span>
+</td>
+<td class="py-3 px-4 font-label-md text-label-md font-mono text-on-surface-variant">
+              User Session
+            </td>
+<td class="py-3 px-4 font-body-sm text-body-sm text-error font-medium">
+              Auth Token / Pass
+            </td>
+<td class="py-3 px-4 font-label-sm text-caption text-on-surface-variant font-mono italic opacity-60">
+              [Empty]
+            </td>
+<td class="py-3 px-4">
+<span class="font-label-sm text-caption text-error font-mono font-semibold px-1.5 py-0.5 rounded bg-error-container">
+                AUTH_REJECT_BAD_HASH
+              </span>
+</td>
+<td class="py-3 px-4 font-body-sm text-body-sm text-on-error-container">
+              Failed credential attempt (3x threshold reached). Cleanroom station keypad auto-locked for 15 minutes.
+            </td>
+</tr>
+<!-- Row 7: Auto Log-Off -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-3 px-4 font-label-md text-label-md whitespace-nowrap text-on-surface">
+<span class="font-semibold">26/02/2025</span>
+<span class="text-on-surface-variant text-caption">10:45:00 UTC</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-primary">Anita Shah</span>
+<span class="font-label-sm text-caption text-on-surface-variant font-mono">USR-INIT-104 • Line 04 Lead</span>
+</div>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                Auto log-off
+              </span>
+</td>
+<td class="py-3 px-4 font-label-md text-label-md font-mono text-on-surface-variant">
+              User Session
+            </td>
+<td class="py-3 px-4 font-body-sm text-body-sm text-on-surface-variant">
+              Session Status
+            </td>
+<td class="py-3 px-4 font-label-sm text-caption text-on-surface-variant font-mono line-through opacity-70">
+              ACTIVE_INTERACTIVE
+            </td>
+<td class="py-3 px-4">
+<span class="font-label-sm text-caption text-on-surface font-mono font-semibold px-1.5 py-0.5 rounded bg-surface-container-high">
+                TERMINATED_IDLE
+              </span>
+</td>
+<td class="py-3 px-4 font-body-sm text-body-sm">
+              Inactivity timeout expired (threshold: 30 minutes in Grade B cleanroom zone).
+            </td>
+</tr>
+<!-- Row 8: Login -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-3 px-4 font-label-md text-label-md whitespace-nowrap text-on-surface">
+<span class="font-semibold">26/02/2025</span>
+<span class="text-on-surface-variant text-caption">09:15:10 UTC</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-primary">Anita Shah</span>
+<span class="font-label-sm text-caption text-on-surface-variant font-mono">USR-INIT-104 • Line 04 Lead</span>
+</div>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Login
+              </span>
+</td>
+<td class="py-3 px-4 font-label-md text-label-md font-mono text-on-surface-variant">
+              User Session
+            </td>
+<td class="py-3 px-4 font-body-sm text-body-sm text-on-surface-variant">
+              Access Token
+            </td>
+<td class="py-3 px-4 font-label-sm text-caption text-on-surface-variant font-mono italic opacity-60">
+              [Logged Out]
+            </td>
+<td class="py-3 px-4">
+<span class="font-label-sm text-caption text-primary font-mono font-semibold px-1.5 py-0.5 rounded bg-surface-container-high">
+                SESSION:99201a4
+              </span>
+</td>
+<td class="py-3 px-4 font-body-sm text-body-sm">
+              Biometric badge + dual-factor PIN authentication successful at Gowning Station Air-lock.
+            </td>
+</tr>
+<!-- Row 9: User Management -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-3 px-4 font-label-md text-label-md whitespace-nowrap text-on-surface">
+<span class="font-semibold">26/02/2025</span>
+<span class="text-on-surface-variant text-caption">08:05:44 UTC</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-primary">Elena Rostova</span>
+<span class="font-label-sm text-caption text-on-surface-variant font-mono">USR-QA-305 • QA Manager</span>
+</div>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-caption font-semibold">
+<span class="material-symbols-outlined text-[13px]">manage_accounts</span>
+                User mgmt
+              </span>
+</td>
+<td class="py-3 px-4 font-label-md text-label-md font-mono text-primary font-semibold">
+              K. Johansson (OP-12)
+            </td>
+<td class="py-3 px-4 font-body-sm text-body-sm text-on-surface-variant">
+              Account Status
+            </td>
+<td class="py-3 px-4 font-label-sm text-caption text-on-surface-variant font-mono line-through opacity-70">
+              PROVISIONAL
+            </td>
+<td class="py-3 px-4">
+<span class="font-label-sm text-caption text-on-secondary-container font-mono font-semibold px-1.5 py-0.5 rounded bg-secondary-container">
+                TRAINED_ACTIVE
+              </span>
+</td>
+<td class="py-3 px-4 font-body-sm text-body-sm">
+              Completion of SOP-GMP-T01 aseptic gowning and vial inspection certifications recorded.
+            </td>
+</tr>
+<!-- Row 10: Modify / Lot Reference CAPA -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group">
+<td class="py-3 px-4 font-label-md text-label-md whitespace-nowrap text-on-surface">
+<span class="font-semibold">26/02/2025</span>
+<span class="text-on-surface-variant text-caption">06:22:15 UTC</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-primary">Elena Rostova</span>
+<span class="font-label-sm text-caption text-on-surface-variant font-mono">USR-QA-305 • QA Manager</span>
+</div>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Modify
+              </span>
+</td>
+<td class="py-3 px-4 font-label-md text-label-md font-mono text-primary font-semibold">
+              Lot LT-26A017
+            </td>
+<td class="py-3 px-4 font-body-sm text-body-sm text-on-surface-variant">
+              Reference Sub-code
+            </td>
+<td class="py-3 px-4 font-label-sm text-caption text-on-surface-variant font-mono line-through opacity-70">
+              GLAR-100-B
+            </td>
+<td class="py-3 px-4">
+<span class="font-label-sm text-caption text-primary font-mono font-semibold px-1.5 py-0.5 rounded bg-primary-fixed">
+                GLAR-100-A
+              </span>
+</td>
+<td class="py-3 px-4 font-body-sm text-body-sm">
+              Correction of typo in lot sub-index per deviation approval CAPA-2025-11. Co-signed by QA Head.
+            </td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Entries Controls -->
+<div class="px-space-md py-3.5 bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          Showing <span class="font-semibold text-on-surface">1 - 10</span> of <span class="font-semibold text-on-surface">142</span> auditable events
+        </span>
+<div class="flex items-center gap-1.5 pl-2">
+<label class="font-caption text-caption text-on-surface-variant">Rows:</label>
+<select class="bg-surface-container-lowest text-on-surface font-label-sm text-caption rounded px-2 py-1 focus:outline-none min-h-[32px]">
+<option>10</option>
+<option>25</option>
+<option>50</option>
+<option>100</option>
+</select>
+</div>
+</div>
+<!-- Pagination Navigation -->
+<div class="flex items-center gap-1">
+<button class="min-h-[36px] min-w-[36px] rounded-lg bg-surface-container-lowest text-on-surface-variant flex items-center justify-center hover:bg-surface-container transition-colors disabled:opacity-40" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="min-h-[36px] min-w-[36px] rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold flex items-center justify-center" type="button">
+          1
+        </button>
+<button class="min-h-[36px] min-w-[36px] rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors flex items-center justify-center" type="button">
+          2
+        </button>
+<button class="min-h-[36px] min-w-[36px] rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors flex items-center justify-center" type="button">
+          3
+        </button>
+<span class="px-1 text-on-surface-variant font-label-sm text-caption">...</span>
+<button class="min-h-[36px] min-w-[36px] rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors flex items-center justify-center" type="button">
+          15
+        </button>
+<button class="min-h-[36px] min-w-[36px] rounded-lg bg-surface-container-lowest text-on-surface flex items-center justify-center hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Merkle Tree & Ledger Integrity Diagnostic Card -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+<!-- Cryptographic Proof Details -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-xl shadow-sm p-4 flex flex-col justify-between">
+<div class="flex items-center justify-between pb-3 mb-3 border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">account_tree</span>
+<span class="font-headline-sm text-body-md font-semibold text-primary">Cryptographic Verification Vector</span>
+</div>
+<span class="font-label-sm text-caption text-secondary font-mono bg-secondary-container px-2 py-0.5 rounded">
+          Alg: SHA-256 HMAC
+        </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Merkle Tree Root Hash</span>
+<span class="font-label-sm text-label-sm font-mono text-on-surface bg-surface-container-low p-2 rounded truncate select-all">
+            8f9b2d07183eec1409bc1a3ef94027bcda741094038166bf1480e0fa
+          </span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Hash Sequence Anchor</span>
+<span class="font-label-sm text-label-sm font-mono text-on-surface bg-surface-container-low p-2 rounded truncate select-all">
+            Verified by SecureCore NTP (0x992B-NIST-TSA)
+          </span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-caption text-caption">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+<span>Ledger state mathematically unalterable without invalidating downstream block tree.</span>
+</div>
+<span class="font-mono">Sync latency: 4ms</span>
+</div>
+</div>
+<!-- Active Compliance Summary Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-4 flex flex-col justify-between">
+<div class="flex items-center justify-between pb-3 mb-2 border-b border-surface-container">
+<span class="font-headline-sm text-body-md font-semibold text-primary">Audit Trail Metrics</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant font-mono">Shift 02</span>
+</div>
+<div class="flex items-center justify-around py-2">
+<div class="flex flex-col items-center">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">142</span>
+<span class="font-caption text-caption text-on-surface-variant">Logged Events</span>
+</div>
+<div class="w-px h-10 bg-surface-container"></div>
+<div class="flex flex-col items-center">
+<span class="font-headline-lg text-headline-lg font-bold text-error">1</span>
+<span class="font-caption text-caption text-on-surface-variant">Deviations</span>
+</div>
+<div class="w-px h-10 bg-surface-container"></div>
+<div class="flex flex-col items-center">
+<span class="font-headline-lg text-headline-lg font-bold text-secondary">100%</span>
+<span class="font-caption text-caption text-on-surface-variant">Attested</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-container text-on-surface-variant font-caption text-caption flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">gavel</span>
+<span>Ready for FDA / EMA unannounced digital inspection export.</span>
+</div>
+</div>
+</div>
+<script>
+    function toggleDropdown() {
+      const menu = document.getElementById('exportMenu');
+      if (menu) {
+        menu.classList.toggle('hidden');
+      }
+    }
+
+    function runVerification() {
+      const btn = document.getElementById('verifyBtn');
+      const icon = document.getElementById('verifyIcon');
+      const text = document.getElementById('verifyText');
+
+      if (!btn || !icon || !text) return;
+
+      icon.textContent = 'sync';
+      icon.classList.add('animate-spin');
+      text.textContent = 'Verifying Merkle Roots...';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        icon.classList.remove('animate-spin');
+        icon.textContent = 'check_circle';
+        text.textContent = 'Integrity Validated (0 Breakages)';
+        btn.classList.remove('bg-primary');
+        btn.classList.add('bg-secondary');
+
+        setTimeout(() => {
+          icon.textContent = 'verified_user';
+          text.textContent = 'Verify Integrity';
+          btn.classList.add('bg-primary');
+          btn.classList.remove('bg-secondary');
+          btn.disabled = false;
+        }, 3000);
+      }, 1200);
+    }
+
+    // Close dropdown on outside click
+    document.addEventListener('click', function(e) {
+      const dropdown = document.getElementById('exportDropdown');
+      const menu = document.getElementById('exportMenu');
+      if (dropdown && menu && !dropdown.contains(e.target)) {
+        menu.classList.add('hidden');
+      }
+    });
+  </script>
+</div></main></div></body></html>

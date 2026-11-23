@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed-variant": "#0a4d63", "surface-container-high": "#e6e8ea", "surface-variant": "#e0e3e5", "error": "#ba1a1a", "surface-container-highest": "#e0e3e5", "surface-dim": "#d8dadc", "primary-fixed": "#bee9ff", "inverse-primary": "#8fcfee", "on-primary": "#ffffff", "tertiary": "#324257", "inverse-surface": "#2d3133", "background": "#f7f9fb", "surface-tint": "#1b6681", "on-primary-fixed": "#001f2a", "secondary-fixed-dim": "#98cee8", "tertiary-fixed-dim": "#b7c8e1", "primary-container": "#0f5f7a", "primary": "#00465c", "surface-container-low": "#f2f4f6", "outline-variant": "#bfc8cd", "on-surface-variant": "#40484d", "surface-bright": "#f7f9fb", "on-primary-container": "#96d7f6", "on-primary-fixed-variant": "#004d65", "secondary-fixed": "#bde9ff", "on-secondary": "#ffffff", "surface": "#f7f9fb", "inverse-on-surface": "#eff1f3", "outline": "#70787d", "on-secondary-fixed": "#001f2a", "on-secondary-container": "#2f677e", "on-error": "#ffffff", "primary-fixed-dim": "#8fcfee", "tertiary-container": "#49596f", "on-background": "#191c1e", "surface-container-lowest": "#ffffff", "surface-container": "#eceef0", "secondary-container": "#afe4ff", "on-tertiary-fixed": "#0b1c30", "secondary": "#2d657c", "on-tertiary": "#ffffff", "error-container": "#ffdad6", "on-surface": "#191c1e", "on-tertiary-container": "#bfd0ea", "on-error-container": "#93000a", "tertiary-fixed": "#d3e4fe", "on-tertiary-fixed-variant": "#38485d" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-sm": "1rem", "gutter": "1rem", "space-lg": "1.5rem", "space-xl": "2rem", "space-xs": "0.25rem", "gutter-sm": "0.5rem", "margin-lg": "2rem", "space-sm": "0.5rem", "space-md": "1rem", "gutter-lg": "1.5rem", "margin": "1.5rem" }, "fontFamily": { "label-md": [ "JetBrains Mono" ], "body-lg": [ "Inter" ], "caption": [ "Inter" ], "label-lg": [ "JetBrains Mono" ], "headline-lg": [ "Inter" ], "headline-xl": [ "Inter" ], "label-sm": [ "JetBrains Mono" ], "headline-xl-mobile": [ "Inter" ], "headline-sm": [ "Inter" ], "body-md": [ "Inter" ], "body-sm": [ "Inter" ], "headline-md": [ "Inter" ] }, "fontSize": { "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "body-lg": [ "15px", { "lineHeight": "22px", "fontWeight": "400" } ], "caption": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "label-lg": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "headline-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-xl": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" } ], "headline-xl-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-sm": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "body-md": [ "13px", { "lineHeight": "20px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-md": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 bg-surface-container-lowest border-b border-outline-variant/40 z-50 px-margin flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><img alt="PTS Biopharma Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrC3TcaEYuwiUgXyGbJ_0ea6u5f7BAbpJToNmOK4Yar3kvzqYhgFl1EvVNqWLEiAR0tQqRhZ6JKV8-PfcfjvN8rJpKeZ0CWB7-IqGxEosR6dU_GAvlBEDmZSfAw7dnNtBhjygOdlJAuHn_tuRBSQje34EUN8tZLltAa0m8QMQFOZ6keu4WO3_hT46GuXZx603d1WmskAvzs7ZRaZorMJ_RPxF_E5EQJzp9ui5JjzSplP"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary font-semibold tracking-tight">Product Tracking System</span><span class="px-1.5 py-0.5 rounded bg-surface-container-low border border-outline-variant/50 font-label-sm text-label-sm text-on-surface-variant font-mono">PTS-GMP</span></div><span class="font-caption text-caption text-on-surface-variant">Company Pharmaceutical Limited • Biopharma Packing Division</span></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-2.5 py-1.5 rounded-lg bg-surface-container-low border border-outline-variant/40 font-label-md text-label-md text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-secondary">schedule</span><span>Server: 26/02/2025 14:38 UTC</span></div><div class="flex items-center gap-space-xs px-2.5 py-1.5 rounded-lg bg-error-container/40 border border-error/20 font-label-md text-label-md text-on-error-container font-mono"><span class="w-2 h-2 rounded-full bg-error animate-pulse"></span><span>Idle logoff: 24:18</span></div><div class="h-6 w-px bg-outline-variant/50"></div><button aria-label="Active Deviations and Alerts" class="min-h-[44px] min-w-[44px] relative flex items-center justify-center rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full bg-error text-on-error font-label-sm text-[10px] font-bold ring-2 ring-surface-container-lowest">3</span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-headline-sm text-body-md font-semibold text-on-surface">Anita Shah</span><div class="flex items-center justify-end gap-1"><span class="inline-flex items-center px-1.5 py-0.2 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[10px] uppercase font-semibold">Initiator</span><span class="font-caption text-[11px] text-on-surface-variant">Sec-L2</span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ring-2 ring-outline-variant/30"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-low border-r border-outline-variant/40 z-40 flex flex-col justify-between"><div class="flex flex-col h-full overflow-hidden"><div class="p-space-md border-b border-outline-variant/30"><label class="block font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-1">Operational Context</label><div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest border border-outline-variant/50 cursor-pointer min-h-[44px]"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[20px]">supervised_user_circle</span><div class="flex flex-col"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Packaging Lead</span><span class="font-label-sm text-[10px] text-on-surface-variant font-mono">Cleanroom Line 04</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">unfold_more</span></div></div><div class="flex-1 overflow-y-auto px-3 py-space-md space-y-4"><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><span class="px-3 font-caption text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Batch Core</span><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="binders" href="#"><span class="material-symbols-outlined text-[20px]">folder_managed</span><span class="font-body-md text-body-md">Binders</span></a></nav><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><span class="px-3 font-caption text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Trace &amp; Environmental</span><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="cold-rooms" href="#"><span class="material-symbols-outlined text-[20px]">ac_unit</span><span class="font-body-md text-body-md">Cold rooms</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="scan" href="#"><span class="material-symbols-outlined text-[20px]">qr_code_scanner</span><span class="font-body-md text-body-md">Scan &amp; Verify</span></a></nav><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><span class="px-3 font-caption text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Compliance &amp; Audit</span><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span class="font-body-md text-body-md">Reports &amp; Audit</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="electronic-signatures" href="#"><span class="material-symbols-outlined text-[20px]">draw</span><span class="font-body-md text-body-md">Signatures Log</span></a></nav></div><div class="p-space-sm border-t border-outline-variant/30 bg-surface-container-lowest"><div class="flex items-center justify-between p-2 rounded-lg bg-surface-container border border-outline-variant/40"><div class="flex flex-col"><span class="font-caption text-[10px] text-on-surface-variant uppercase">GMP Status</span><span class="font-label-sm text-label-sm text-secondary font-semibold">21 CFR Part 11 Active</span></div><span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span></div></div><div class="bg-tertiary-container px-3 py-2.5 text-center flex items-center justify-center gap-1.5 border-t border-outline-variant/50"><span class="material-symbols-outlined text-tertiary-fixed text-[16px]">warning</span><span class="font-label-sm text-[11px] font-bold tracking-wider text-tertiary-fixed uppercase font-mono">PROTOTYPE – NOT VALIDATED</span></div></div></aside><div class="pl-64"><main class="w-full min-h-screen pt-16 px-gutter bg-surface"><div class="flex flex-col w-full pb-12">
+<!-- Top Section / Breadcrumb & Header -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 py-4 mb-2">
+<div class="flex flex-col gap-1">
+<nav class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant font-mono">
+<span class="hover:text-primary cursor-pointer transition-colors">HOME</span>
+<span class="text-outline-variant">/</span>
+<span class="hover:text-primary cursor-pointer transition-colors">PACKING LINE 04</span>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-semibold">INITIATOR WORKSTATION</span>
+</nav>
+<div class="flex items-baseline gap-3 mt-1">
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">S05 Initiator Dashboard</h1>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold">Live Mode</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl">
+        Real-time lot tracking, cleanroom movement execution, and stage hold-time compliance monitoring under 21 CFR Part 11 protocols.
+      </p>
+</div>
+<!-- Quick Action Buttons (Min 44px Touch Targets) -->
+<div class="flex flex-wrap items-center gap-2.5">
+<button class="min-h-[44px] px-3.5 py-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container border border-outline-variant/60 text-primary font-headline-sm text-body-md font-semibold transition-all flex items-center gap-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>New Binder</span>
+</button>
+<button class="min-h-[44px] px-3.5 py-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container border border-outline-variant/60 text-secondary font-headline-sm text-body-md font-semibold transition-all flex items-center gap-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary" type="button">
+<span class="material-symbols-outlined text-[18px]">ac_unit</span>
+<span>Load into Cold Room</span>
+</button>
+<button class="min-h-[44px] px-4 py-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-body-md font-semibold transition-all flex items-center gap-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container focus:ring-offset-2" type="button">
+<span class="material-symbols-outlined text-[18px]">output</span>
+<span>Unload Cold Room</span>
+</button>
+</div>
+</div>
+<!-- Prominent Quick Barcode Scanning Module -->
+<section class="bg-surface-container-lowest border border-outline-variant/50 rounded-xl p-4 mb-5 shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-3 border-b border-surface-container-high">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-container/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">barcode_scanner</span>
+</div>
+<div>
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">Universal Cleanroom Scanner</span>
+<span class="block font-caption text-caption text-on-surface-variant">Immediate lot, pallet, or sterile bin lookup with auto-binder linkage</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span>Ready (HoneyWell Xenon XP 1950g - Station #04)</span>
+</span>
+</div>
+</div>
+<div class="pt-3 flex flex-col lg:flex-row items-stretch gap-3">
+<div class="relative flex-1">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">qr_code_2</span>
+</div>
+<input class="w-full min-h-[44px] pl-10 pr-32 bg-surface-container-low/70 border border-outline-variant/60 rounded-lg text-on-surface font-label-md text-label-lg focus:bg-surface-container-lowest focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all placeholder:text-on-surface-variant/70 font-mono" id="barcodeInput" placeholder="Scan 2D DataMatrix or enter barcode (e.g. PL-26-000124, LT-26A017)..." type="text"/>
+<div class="absolute inset-y-0 right-2 flex items-center">
+<kbd class="hidden sm:inline-flex items-center px-1.5 py-0.5 rounded border border-outline-variant/50 bg-surface-container font-label-sm text-[10px] text-on-surface-variant font-mono">ENTER</kbd>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="min-h-[44px] px-5 py-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-body-md font-semibold transition-all flex items-center justify-center gap-2 shrink-0 shadow-sm" id="btnSubmitScan" type="button">
+<span class="material-symbols-outlined text-[18px]">sensors</span>
+<span>Submit Scan</span>
+</button>
+</div>
+</div>
+<!-- Quick filter chips -->
+<div class="flex flex-wrap items-center gap-2 pt-3">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider font-semibold mr-1">Scan Context:</span>
+<button class="filter-chip active min-h-[32px] px-3 py-1 rounded-md text-on-primary bg-primary font-label-sm text-label-sm font-semibold transition-colors" type="button">All Scans</button>
+<button class="filter-chip min-h-[32px] px-3 py-1 rounded-md text-on-surface-variant bg-surface-container-low hover:bg-surface-container hover:text-on-surface font-label-sm text-label-sm transition-colors border border-outline-variant/40" type="button">Pallet (PL)</button>
+<button class="filter-chip min-h-[32px] px-3 py-1 rounded-md text-on-surface-variant bg-surface-container-low hover:bg-surface-container hover:text-on-surface font-label-sm text-label-sm transition-colors border border-outline-variant/40" type="button">Rack (RK)</button>
+<button class="filter-chip min-h-[32px] px-3 py-1 rounded-md text-on-surface-variant bg-surface-container-low hover:bg-surface-container hover:text-on-surface font-label-sm text-label-sm transition-colors border border-outline-variant/40" type="button">Vial Tray (VT)</button>
+<button class="filter-chip min-h-[32px] px-3 py-1 rounded-md text-on-surface-variant bg-surface-container-low hover:bg-surface-container hover:text-on-surface font-label-sm text-label-sm transition-colors border border-outline-variant/40" type="button">Lot Master (LT)</button>
+</div>
+</section>
+<!-- 4 KPI Metric Cards -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-5">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant/50 rounded-xl p-4 flex flex-col justify-between shadow-sm relative overflow-hidden group hover:border-primary/40 transition-colors">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-caption text-caption uppercase tracking-wider text-on-surface-variant font-bold">Products in Cold Rooms</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-xl text-headline-xl font-bold text-on-surface">18</span>
+<span class="font-label-sm text-label-sm font-semibold text-secondary font-mono">BINS</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed/50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">ac_unit</span>
+</div>
+</div>
+<div class="mt-3 pt-3 border-t border-surface-container-high/60 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          CR-01 &amp; CR-02 (84% cap)
+        </span>
+<span class="font-mono text-label-sm font-medium">4 Racks</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest border border-amber-300/80 rounded-xl p-4 flex flex-col justify-between shadow-sm relative overflow-hidden group hover:border-amber-400 transition-colors">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-caption text-caption uppercase tracking-wider text-amber-900 font-bold">Hold-Time Warnings</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-xl text-headline-xl font-bold text-amber-700">3</span>
+<span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-label-sm text-[10px] font-bold uppercase tracking-wider">Amber Alert</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center text-amber-600 border border-amber-200">
+<span class="material-symbols-outlined text-[22px]">hourglass_top</span>
+</div>
+</div>
+<div class="mt-3 pt-3 border-t border-amber-100 flex items-center justify-between text-amber-800 font-body-sm text-body-sm">
+<span class="flex items-center gap-1 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+          ≥80% stage window utilized
+        </span>
+<span class="font-mono text-label-sm text-amber-700 font-semibold">&lt;15m left</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest border border-error/50 rounded-xl p-4 flex flex-col justify-between shadow-sm relative overflow-hidden group hover:border-error transition-colors ring-1 ring-error/20">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-caption text-caption uppercase tracking-wider text-error font-bold">Hold-Time EXCEEDED</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-xl text-headline-xl font-bold text-error">1</span>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-[10px] font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+              Critical
+            </span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-error-container/50 flex items-center justify-center text-error border border-error/30 animate-pulse">
+<span class="material-symbols-outlined text-[22px]">error</span>
+</div>
+</div>
+<div class="mt-3 pt-3 border-t border-error/15 flex items-center justify-between text-on-error-container font-body-sm text-body-sm">
+<span class="truncate font-medium">SOP-GMP-088 triggered</span>
+<span class="font-label-sm text-label-sm font-semibold text-error shrink-0">QA Notified</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant/50 rounded-xl p-4 flex flex-col justify-between shadow-sm relative overflow-hidden group hover:border-primary/40 transition-colors">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-caption text-caption uppercase tracking-wider text-on-surface-variant font-bold">Movements Today</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-xl text-headline-xl font-bold text-on-surface">7</span>
+<span class="font-label-sm text-label-sm text-emerald-700 font-semibold font-mono flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>100% Validated
+            </span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">swap_horiz</span>
+</div>
+</div>
+<div class="mt-3 pt-3 border-t border-surface-container-high/60 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="truncate">Last recorded 12 mins ago</span>
+<span class="font-mono text-label-sm text-primary font-semibold">A. Shah</span>
+</div>
+</div>
+</section>
+<!-- Main Split Layout (Wide 8-cols + Narrow 4-cols) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-5 items-start">
+<!-- LEFT COLUMN: Hold-Time Watchlist (8 cols) -->
+<section class="xl:col-span-8 flex flex-col gap-4">
+<div class="bg-surface-container-lowest border border-outline-variant/50 rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Card Header with Controls -->
+<div class="p-4 border-b border-outline-variant/40 flex flex-col md:flex-row md:items-center justify-between gap-3 bg-surface-container-low/30">
+<div class="flex items-center gap-2.5">
+<div class="w-2.5 h-2.5 rounded-full bg-error"></div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Hold-time Watchlist</h2>
+<span class="px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/60 font-label-sm text-[11px] text-on-surface-variant font-mono">
+                  Sorted by least time remaining
+                </span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant mt-0.5">Automated countdown clocks under validated Master Batch Records</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="relative">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant absolute left-2.5 top-1/2 -translate-y-1/2 pointer-events-none">search</span>
+<input class="min-h-[36px] pl-8 pr-3 bg-surface-container-lowest border border-outline-variant/60 rounded-md text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary w-44 lg:w-56" placeholder="Filter watchlist..." type="text"/>
+</div>
+<button class="min-h-[36px] min-w-[36px] rounded-md border border-outline-variant/60 hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors" title="Export Watchlist CSV">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="min-h-[36px] min-w-[36px] rounded-md border border-outline-variant/60 hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors" title="Refresh Timers">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-outline-variant/40 bg-surface-container-low font-caption text-caption uppercase tracking-wider text-on-surface-variant font-semibold select-none">
+<th class="py-2.5 px-3 min-w-[190px]">Product</th>
+<th class="py-2.5 px-2.5 min-w-[100px]">Lot / Batch</th>
+<th class="py-2.5 px-3 min-w-[160px]">Current Location</th>
+<th class="py-2.5 px-2.5 min-w-[130px]">Stage / Rule</th>
+<th class="py-2.5 px-2.5 min-w-[80px]">Elapsed</th>
+<th class="py-2.5 px-3 min-w-[170px]">Hold-Time Compliance</th>
+<th class="py-2.5 px-3 text-right min-w-[110px]">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/30 font-body-sm text-body-sm">
+<!-- Row 1: EXCEEDED (Critical Deviation) -->
+<tr class="bg-red-50/50 hover:bg-red-50 transition-colors border-l-4 border-l-error">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[18px] shrink-0">emergency_home</span>
+<div>
+<span class="font-semibold text-on-surface block leading-tight">Filgrastim 300 mcg/0.5 mL</span>
+<span class="font-caption text-caption text-on-surface-variant font-mono">PFS Format • 10x Pack</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-2.5">
+<div class="flex flex-col font-mono text-label-sm">
+<span class="font-semibold text-primary">LT-26A014</span>
+<span class="text-on-surface-variant">B260114</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5 font-mono text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">meeting_room</span>
+<span>Line 04 Inspection Buffer</span>
+</div>
+</td>
+<td class="py-3 px-2.5">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container font-caption text-caption text-on-surface-variant font-medium">
+                    Visual inspection
+                  </span>
+</td>
+<td class="py-3 px-2.5 font-mono font-bold text-error">
+                  1h 04m
+                  <span class="block font-caption text-[10px] text-on-surface-variant font-normal">Limit: 1h 00m</span>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col gap-1 w-full max-w-[160px]">
+<div class="flex items-center justify-between text-caption font-bold text-error font-mono">
+<span>+4m OVERDUE</span>
+<span>106%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-error-container overflow-hidden">
+<div class="h-full bg-error rounded-full w-full"></div>
+</div>
+<span class="font-caption text-[10px] text-error font-semibold uppercase tracking-wider flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">warning</span> Dev SOP-088 Open
+                    </span>
+</div>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="min-h-[44px] px-3 py-1.5 rounded-md bg-error text-on-error hover:bg-error/90 font-headline-sm text-body-sm font-semibold transition-all inline-flex items-center gap-1 shadow-sm" type="button">
+<span>Log QA Dev</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: WARNING 90% -->
+<tr class="hover:bg-amber-50/40 transition-colors border-l-4 border-l-amber-500">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-600 text-[18px] shrink-0">vaccines</span>
+<div>
+<span class="font-semibold text-on-surface block leading-tight">Insulin Glargine 100 IU/mL</span>
+<span class="font-caption text-caption text-on-surface-variant font-mono">Cartridge 3 mL • SoloStar</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-2.5">
+<div class="flex flex-col font-mono text-label-sm">
+<span class="font-semibold text-primary">LT-26A017</span>
+<span class="text-on-surface-variant">B260117</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5 font-mono text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">warehouse</span>
+<span>CR-01 / RK-CR01-001</span>
+</div>
+</td>
+<td class="py-3 px-2.5">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container font-caption text-caption text-on-surface-variant font-medium">
+                    Cold room storage
+                  </span>
+</td>
+<td class="py-3 px-2.5 font-mono font-bold text-amber-700">
+                  0h 54m
+                  <span class="block font-caption text-[10px] text-on-surface-variant font-normal">Limit: 1h 00m</span>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col gap-1 w-full max-w-[160px]">
+<div class="flex items-center justify-between text-caption font-bold text-amber-700 font-mono">
+<span>6m remaining</span>
+<span>90%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-amber-100 overflow-hidden">
+<div class="h-full bg-amber-500 rounded-full" style="width: 90%;"></div>
+</div>
+<span class="font-caption text-[10px] text-amber-800 font-medium">Hold-time alert active</span>
+</div>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="min-h-[44px] px-3 py-1.5 rounded-md border border-outline-variant/60 hover:bg-surface-container text-primary font-headline-sm text-body-sm font-semibold transition-all inline-flex items-center gap-1" type="button">
+<span>Unload CR</span>
+<span class="material-symbols-outlined text-[16px]">output</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: WARNING 85% -->
+<tr class="hover:bg-amber-50/40 transition-colors border-l-4 border-l-amber-500">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-600 text-[18px] shrink-0">biotech</span>
+<div>
+<span class="font-semibold text-on-surface block leading-tight">Adalimumab 40 mg/0.8 mL</span>
+<span class="font-caption text-caption text-on-surface-variant font-mono">Autoinjector Pen</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-2.5">
+<div class="flex flex-col font-mono text-label-sm">
+<span class="font-semibold text-primary">LT-26A018</span>
+<span class="text-on-surface-variant">B260118</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5 font-mono text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">pallet</span>
+<span>Pallet PL-26-000124</span>
+</div>
+</td>
+<td class="py-3 px-2.5">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container font-caption text-caption text-on-surface-variant font-medium">
+                    Packing buffer
+                  </span>
+</td>
+<td class="py-3 px-2.5 font-mono font-bold text-amber-700">
+                  0h 51m
+                  <span class="block font-caption text-[10px] text-on-surface-variant font-normal">Limit: 1h 00m</span>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col gap-1 w-full max-w-[160px]">
+<div class="flex items-center justify-between text-caption font-bold text-amber-700 font-mono">
+<span>9m remaining</span>
+<span>85%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-amber-100 overflow-hidden">
+<div class="h-full bg-amber-500 rounded-full" style="width: 85%;"></div>
+</div>
+<span class="font-caption text-[10px] text-amber-800 font-medium">Stage transition pending</span>
+</div>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="min-h-[44px] px-3 py-1.5 rounded-md border border-outline-variant/60 hover:bg-surface-container text-primary font-headline-sm text-body-sm font-semibold transition-all inline-flex items-center gap-1" type="button">
+<span>Move</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: WARNING 80% -->
+<tr class="hover:bg-amber-50/40 transition-colors border-l-4 border-l-amber-500">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-600 text-[18px] shrink-0">vaccines</span>
+<div>
+<span class="font-semibold text-on-surface block leading-tight">Insulin Glargine 100 IU/mL</span>
+<span class="font-caption text-caption text-on-surface-variant font-mono">Cartridge 3 mL • SoloStar</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-2.5">
+<div class="flex flex-col font-mono text-label-sm">
+<span class="font-semibold text-primary">LT-26A019</span>
+<span class="text-on-surface-variant">B260119</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5 font-mono text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">warehouse</span>
+<span>CR-02 / Shelf B-01</span>
+</div>
+</td>
+<td class="py-3 px-2.5">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container font-caption text-caption text-on-surface-variant font-medium">
+                    Filling complete
+                  </span>
+</td>
+<td class="py-3 px-2.5 font-mono font-bold text-amber-700">
+                  0h 48m
+                  <span class="block font-caption text-[10px] text-on-surface-variant font-normal">Limit: 1h 00m</span>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col gap-1 w-full max-w-[160px]">
+<div class="flex items-center justify-between text-caption font-bold text-amber-700 font-mono">
+<span>12m remaining</span>
+<span>80%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-amber-100 overflow-hidden">
+<div class="h-full bg-amber-500 rounded-full" style="width: 80%;"></div>
+</div>
+<span class="font-caption text-[10px] text-amber-800 font-medium">Warning threshold</span>
+</div>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="min-h-[44px] px-3 py-1.5 rounded-md border border-outline-variant/60 hover:bg-surface-container text-primary font-headline-sm text-body-sm font-semibold transition-all inline-flex items-center gap-1" type="button">
+<span>Move</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: OK 36% -->
+<tr class="hover:bg-surface-container-low transition-colors border-l-4 border-l-emerald-500">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">emergency_home</span>
+<div>
+<span class="font-semibold text-on-surface block leading-tight">Filgrastim 300 mcg/0.5 mL</span>
+<span class="font-caption text-caption text-on-surface-variant font-mono">PFS Format • 5x Pack</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-2.5">
+<div class="flex flex-col font-mono text-label-sm">
+<span class="font-semibold text-primary">LT-26A020</span>
+<span class="text-on-surface-variant">B260120</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5 font-mono text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">warehouse</span>
+<span>CR-01 / RK-CR01-004</span>
+</div>
+</td>
+<td class="py-3 px-2.5">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container font-caption text-caption text-on-surface-variant font-medium">
+                    Cold room storage
+                  </span>
+</td>
+<td class="py-3 px-2.5 font-mono text-emerald-800 font-semibold">
+                  0h 22m
+                  <span class="block font-caption text-[10px] text-on-surface-variant font-normal">Limit: 1h 00m</span>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col gap-1 w-full max-w-[160px]">
+<div class="flex items-center justify-between text-caption font-semibold text-emerald-700 font-mono">
+<span>38m remaining</span>
+<span>36%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-emerald-100 overflow-hidden">
+<div class="h-full bg-emerald-600 rounded-full" style="width: 36%;"></div>
+</div>
+<span class="font-caption text-[10px] text-emerald-800 font-medium">Normal operating window</span>
+</div>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="min-h-[44px] px-3 py-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-headline-sm text-body-sm font-semibold transition-all inline-flex items-center gap-1" type="button">
+<span>View Binder</span>
+<span class="material-symbols-outlined text-[16px]">folder_open</span>
+</button>
+</td>
+</tr>
+<!-- Row 6: OK 23% -->
+<tr class="hover:bg-surface-container-low transition-colors border-l-4 border-l-emerald-500">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">biotech</span>
+<div>
+<span class="font-semibold text-on-surface block leading-tight">Adalimumab 40 mg/0.8 mL</span>
+<span class="font-caption text-caption text-on-surface-variant font-mono">Autoinjector Pen</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-2.5">
+<div class="flex flex-col font-mono text-label-sm">
+<span class="font-semibold text-primary">LT-26A021</span>
+<span class="text-on-surface-variant">B260121</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-1.5 font-mono text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">meeting_room</span>
+<span>Packing Buffer Station 04</span>
+</div>
+</td>
+<td class="py-3 px-2.5">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container font-caption text-caption text-on-surface-variant font-medium">
+                    Packing buffer
+                  </span>
+</td>
+<td class="py-3 px-2.5 font-mono text-emerald-800 font-semibold">
+                  0h 14m
+                  <span class="block font-caption text-[10px] text-on-surface-variant font-normal">Limit: 1h 00m</span>
+</td>
+<td class="py-3 px-3">
+<div class="flex flex-col gap-1 w-full max-w-[160px]">
+<div class="flex items-center justify-between text-caption font-semibold text-emerald-700 font-mono">
+<span>46m remaining</span>
+<span>23%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-emerald-100 overflow-hidden">
+<div class="h-full bg-emerald-600 rounded-full" style="width: 23%;"></div>
+</div>
+<span class="font-caption text-[10px] text-emerald-800 font-medium">Normal operating window</span>
+</div>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="min-h-[44px] px-3 py-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-headline-sm text-body-sm font-semibold transition-all inline-flex items-center gap-1" type="button">
+<span>View Binder</span>
+<span class="material-symbols-outlined text-[16px]">folder_open</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Summary Bar -->
+<div class="p-3 bg-surface-container-low/50 border-t border-outline-variant/40 flex flex-col sm:flex-row items-center justify-between gap-2 text-on-surface-variant font-caption text-caption">
+<div class="flex items-center gap-3">
+<span>Showing <strong class="text-on-surface">6 active lots</strong> in hold-critical stages</span>
+<span class="hidden sm:inline">•</span>
+<span class="text-error font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+              1 lot requires supervisor override
+            </span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-mono">Sync cycle: 15s</span>
+<button class="min-h-[32px] px-2 py-1 rounded bg-surface-container-lowest border border-outline-variant/50 text-primary font-medium hover:bg-surface-container transition-colors">
+              Manage Rules
+            </button>
+</div>
+</div>
+</div>
+<!-- Quick Batch Stage Progress Overview -->
+<div class="bg-surface-container-lowest border border-outline-variant/50 rounded-xl p-4 shadow-sm">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">linear_scale</span>
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">Line 04 Active Packaging Sequence</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Lot: LT-26A017 • Target: 12,000 Packs</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-1">
+<div class="p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/40">
+<div class="flex items-center justify-between text-caption font-semibold uppercase text-emerald-800 mb-1">
+<span>1. Cold Unload</span>
+<span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
+</div>
+<div class="font-label-sm font-mono text-on-surface">Completed 14:28</div>
+<div class="font-caption text-[10px] text-on-surface-variant mt-0.5">By A. Shah (Verified)</div>
+</div>
+<div class="p-2.5 rounded-lg bg-primary-fixed/30 border border-primary-container/30">
+<div class="flex items-center justify-between text-caption font-semibold uppercase text-primary mb-1">
+<span>2. Visual Insp.</span>
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+</div>
+<div class="font-label-sm font-mono text-on-surface font-bold">In-Progress (82%)</div>
+<div class="font-caption text-[10px] text-on-surface-variant mt-0.5">Station 04-A Camera</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low/50 border border-outline-variant/30 opacity-70">
+<div class="flex items-center justify-between text-caption font-semibold uppercase text-on-surface-variant mb-1">
+<span>3. Cartoning</span>
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+</div>
+<div class="font-label-sm font-mono text-on-surface-variant">Queued</div>
+<div class="font-caption text-[10px] text-on-surface-variant mt-0.5">Line feeder cleared</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low/50 border border-outline-variant/30 opacity-70">
+<div class="flex items-center justify-between text-caption font-semibold uppercase text-on-surface-variant mb-1">
+<span>4. Final Case Pack</span>
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+</div>
+<div class="font-label-sm font-mono text-on-surface-variant">Pending Step 3</div>
+<div class="font-caption text-[10px] text-on-surface-variant mt-0.5">Pallet PL-26-000125</div>
+</div>
+</div>
+</div>
+</section>
+<!-- RIGHT COLUMN: Recent Movements & Cleanroom Telemetry (4 cols) -->
+<section class="xl:col-span-4 flex flex-col gap-4">
+<!-- Environmental & Cold Room Telemetry Widget -->
+<div class="bg-surface-container-lowest border border-outline-variant/50 rounded-xl p-4 shadow-sm">
+<div class="flex items-center justify-between pb-3 border-b border-surface-container-high">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">thermostat</span>
+<div>
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">Cleanroom Telemetry</span>
+<span class="block font-caption text-caption text-on-surface-variant">Validated SCADA Stream</span>
+</div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 font-label-sm text-[11px] font-semibold border border-emerald-200">
+            CALIBRATED
+          </span>
+</div>
+<div class="grid grid-cols-3 gap-2 pt-3">
+<div class="p-2 rounded-lg bg-surface-container-low border border-outline-variant/30 text-center">
+<span class="font-caption text-[10px] text-on-surface-variant uppercase font-bold block">CR-01 Temp</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface font-mono">4.2°C</span>
+<span class="inline-flex items-center gap-0.5 text-emerald-700 font-label-sm text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>OK (2-8°)
+            </span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low border border-outline-variant/30 text-center">
+<span class="font-caption text-[10px] text-on-surface-variant uppercase font-bold block">CR-02 Temp</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface font-mono">3.8°C</span>
+<span class="inline-flex items-center gap-0.5 text-emerald-700 font-label-sm text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>OK (2-8°)
+            </span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low border border-outline-variant/30 text-center">
+<span class="font-caption text-[10px] text-on-surface-variant uppercase font-bold block">Humidity</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface font-mono">42%</span>
+<span class="inline-flex items-center gap-0.5 text-emerald-700 font-label-sm text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>OK (&lt;50%)
+            </span>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-surface-container-high/60 flex items-center justify-between text-on-surface-variant font-caption text-[11px]">
+<span class="flex items-center gap-1 font-mono">Air Press: 45.2 Pa (Line 04)</span>
+<span class="text-secondary font-medium">Log #ENV-2602-04</span>
+</div>
+</div>
+<!-- Recent Movements Activity Feed -->
+<div class="bg-surface-container-lowest border border-outline-variant/50 rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-4 border-b border-outline-variant/40 flex items-center justify-between bg-surface-container-low/30">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">history</span>
+<div>
+<h2 class="font-headline-sm text-body-md font-semibold text-on-surface">Recent Movements (Today)</h2>
+<span class="font-caption text-caption text-on-surface-variant">Validated chain-of-custody audit feed</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm font-mono text-primary font-bold">7 Recorded</span>
+</div>
+<!-- Activity Timeline -->
+<div class="p-4 flex flex-col gap-3.5 max-h-[580px] overflow-y-auto">
+<!-- Movement 1 -->
+<div class="flex items-start gap-3 relative pb-3.5 border-b border-surface-container-high/60 last:border-0 last:pb-0">
+<div class="w-8 h-8 rounded-full bg-secondary-container/50 border border-secondary/30 flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">output</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-sm text-[11px] font-mono text-primary font-bold">26/02/2025 14:28</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface-variant font-mono text-[10px]">CR Unload</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5 leading-snug">
+                Unloaded from <strong class="font-mono text-secondary">CR-01 (RK-CR01-001)</strong> to Line 04 Inspection.
+              </p>
+<div class="flex items-center justify-between gap-2 mt-1 font-caption text-caption text-on-surface-variant">
+<span>Anita Shah (Initiator)</span>
+<span class="font-mono text-primary font-medium">Batch B260117</span>
+</div>
+</div>
+</div>
+<!-- Movement 2 -->
+<div class="flex items-start gap-3 relative pb-3.5 border-b border-surface-container-high/60 last:border-0 last:pb-0">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">move_to_inbox</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-sm text-[11px] font-mono text-on-surface-variant font-medium">26/02/2025 13:50</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface-variant font-mono text-[10px]">CR Transfer</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5 leading-snug">
+                Transferred from Filling Buffer to Cold Room <strong class="font-mono text-secondary">CR-02</strong>.
+              </p>
+<div class="flex items-center justify-between gap-2 mt-1 font-caption text-caption text-on-surface-variant">
+<span>Anita Shah (Initiator)</span>
+<span class="font-mono text-primary font-medium">Batch B260118</span>
+</div>
+</div>
+</div>
+<!-- Movement 3 -->
+<div class="flex items-start gap-3 relative pb-3.5 border-b border-surface-container-high/60 last:border-0 last:pb-0">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">barcode_scanner</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-sm text-[11px] font-mono text-on-surface-variant font-medium">26/02/2025 13:12</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface-variant font-mono text-[10px]">Scan</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5 leading-snug">
+                Pallet <strong class="font-mono text-primary">PL-26-000124</strong> barcode scanned at Air Lock AL-03.
+              </p>
+<div class="flex items-center justify-between gap-2 mt-1 font-caption text-caption text-on-surface-variant">
+<span>Anita Shah (Initiator)</span>
+<span class="font-mono text-primary font-medium">Batch B260119</span>
+</div>
+</div>
+</div>
+<!-- Movement 4 -->
+<div class="flex items-start gap-3 relative pb-3.5 border-b border-surface-container-high/60 last:border-0 last:pb-0">
+<div class="w-8 h-8 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center text-emerald-800 shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-sm text-[11px] font-mono text-on-surface-variant font-medium">26/02/2025 11:45</span>
+<span class="px-1.5 py-0.2 rounded bg-emerald-50 text-emerald-800 font-mono text-[10px]">Sign-off</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5 leading-snug">
+                Stage sign-off: Visual inspection verified on Line 04.
+              </p>
+<div class="flex items-center justify-between gap-2 mt-1 font-caption text-caption text-on-surface-variant">
+<span>Anita Shah (Initiator)</span>
+<span class="font-mono text-primary font-medium">Batch B260114</span>
+</div>
+</div>
+</div>
+<!-- Movement 5 -->
+<div class="flex items-start gap-3 relative pb-3.5 border-b border-surface-container-high/60 last:border-0 last:pb-0">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">archive</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-sm text-[11px] font-mono text-on-surface-variant font-medium">26/02/2025 10:30</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface-variant font-mono text-[10px]">CR Load</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5 leading-snug">
+                Loaded into Cold Room <strong class="font-mono text-secondary">CR-01 (Shelf S-02)</strong>.
+              </p>
+<div class="flex items-center justify-between gap-2 mt-1 font-caption text-caption text-on-surface-variant">
+<span>Anita Shah (Initiator)</span>
+<span class="font-mono text-primary font-medium">Batch B260114</span>
+</div>
+</div>
+</div>
+<!-- Movement 6 -->
+<div class="flex items-start gap-3 relative pb-3.5 border-b border-surface-container-high/60 last:border-0 last:pb-0">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">call_received</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-sm text-[11px] font-mono text-on-surface-variant font-medium">26/02/2025 09:15</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface-variant font-mono text-[10px]">Transfer In</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5 leading-snug">
+                Received from Cleanroom Filling Line A (Aseptic Core).
+              </p>
+<div class="flex items-center justify-between gap-2 mt-1 font-caption text-caption text-on-surface-variant">
+<span>Anita Shah (Initiator)</span>
+<span class="font-mono text-primary font-medium">Batch B260117</span>
+</div>
+</div>
+</div>
+<!-- Movement 7 -->
+<div class="flex items-start gap-3 relative last:border-0 last:pb-0">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-tertiary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-sm text-[11px] font-mono text-on-surface-variant font-medium">26/02/2025 08:30</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface-variant font-mono text-[10px]">Calibration</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5 leading-snug">
+                Daily shift startup scan, scale tare check, and optical verification complete.
+              </p>
+<div class="flex items-center justify-between gap-2 mt-1 font-caption text-caption text-on-surface-variant">
+<span>Anita Shah (Initiator)</span>
+<span class="font-mono text-emerald-700 font-medium">Shift Start Validated</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low/50 border-t border-outline-variant/40 flex items-center justify-between">
+<a class="min-h-[44px] w-full flex items-center justify-center gap-1.5 text-primary hover:text-primary-container font-headline-sm text-body-sm font-semibold transition-colors" href="#">
+<span>View Complete 21 CFR Part 11 Audit Trail</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  (function() {
+    // Quick barcode input simulation
+    const barcodeInput = document.getElementById('barcodeInput');
+    const btnSubmit = document.getElementById('btnSubmitScan');
+
+    function handleBarcodeSubmit() {
+      const val = barcodeInput.value.trim();
+      if (!val) {
+        barcodeInput.focus();
+        barcodeInput.classList.add('ring-2', 'ring-amber-500');
+        setTimeout(() => barcodeInput.classList.remove('ring-2', 'ring-amber-500'), 1200);
+        return;
+      }
+      
+      // Feedback toast simulation
+      const originalText = btnSubmit.innerHTML;
+      btnSubmit.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Processing...</span>';
+      btnSubmit.disabled = true;
+
+      setTimeout(() => {
+        btnSubmit.innerHTML = '<span class="material-symbols-outlined text-[18px]">done</span><span>Found</span>';
+        btnSubmit.classList.replace('bg-primary-container', 'bg-emerald-700');
+
+        setTimeout(() => {
+          btnSubmit.innerHTML = originalText;
+          btnSubmit.classList.replace('bg-emerald-700', 'bg-primary-container');
+          btnSubmit.disabled = false;
+          barcodeInput.value = '';
+          barcodeInput.focus();
+        }, 1500);
+      }, 600);
+    }
+
+    if (btnSubmit && barcodeInput) {
+      btnSubmit.addEventListener('click', handleBarcodeSubmit);
+      barcodeInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          handleBarcodeSubmit();
+        }
+      });
+    }
+
+    // Filter Chips Toggle
+    const filterChips = document.querySelectorAll('.filter-chip');
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        filterChips.forEach(c => {
+          c.classList.remove('bg-primary', 'text-on-primary', 'font-semibold');
+          c.classList.add('bg-surface-container-low', 'text-on-surface-variant', 'border', 'border-outline-variant/40');
+        });
+        chip.classList.remove('bg-surface-container-low', 'text-on-surface-variant', 'border', 'border-outline-variant/40');
+        chip.classList.add('bg-primary', 'text-on-primary', 'font-semibold');
+      });
+    });
+  })();
+</script></main></div></body></html>

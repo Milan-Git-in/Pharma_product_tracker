@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed-variant": "#0a4d63", "surface-container-high": "#e6e8ea", "surface-variant": "#e0e3e5", "error": "#ba1a1a", "surface-container-highest": "#e0e3e5", "surface-dim": "#d8dadc", "primary-fixed": "#bee9ff", "inverse-primary": "#8fcfee", "on-primary": "#ffffff", "tertiary": "#324257", "inverse-surface": "#2d3133", "background": "#f7f9fb", "surface-tint": "#1b6681", "on-primary-fixed": "#001f2a", "secondary-fixed-dim": "#98cee8", "tertiary-fixed-dim": "#b7c8e1", "primary-container": "#0f5f7a", "primary": "#00465c", "surface-container-low": "#f2f4f6", "outline-variant": "#bfc8cd", "on-surface-variant": "#40484d", "surface-bright": "#f7f9fb", "on-primary-container": "#96d7f6", "on-primary-fixed-variant": "#004d65", "secondary-fixed": "#bde9ff", "on-secondary": "#ffffff", "surface": "#f7f9fb", "inverse-on-surface": "#eff1f3", "outline": "#70787d", "on-secondary-fixed": "#001f2a", "on-secondary-container": "#2f677e", "on-error": "#ffffff", "primary-fixed-dim": "#8fcfee", "tertiary-container": "#49596f", "on-background": "#191c1e", "surface-container-lowest": "#ffffff", "surface-container": "#eceef0", "secondary-container": "#afe4ff", "on-tertiary-fixed": "#0b1c30", "secondary": "#2d657c", "on-tertiary": "#ffffff", "error-container": "#ffdad6", "on-surface": "#191c1e", "on-tertiary-container": "#bfd0ea", "on-error-container": "#93000a", "tertiary-fixed": "#d3e4fe", "on-tertiary-fixed-variant": "#38485d" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-sm": "1rem", "gutter": "1rem", "space-lg": "1.5rem", "space-xl": "2rem", "space-xs": "0.25rem", "gutter-sm": "0.5rem", "margin-lg": "2rem", "space-sm": "0.5rem", "space-md": "1rem", "gutter-lg": "1.5rem", "margin": "1.5rem" }, "fontFamily": { "label-md": [ "JetBrains Mono" ], "body-lg": [ "Inter" ], "caption": [ "Inter" ], "label-lg": [ "JetBrains Mono" ], "headline-lg": [ "Inter" ], "headline-xl": [ "Inter" ], "label-sm": [ "JetBrains Mono" ], "headline-xl-mobile": [ "Inter" ], "headline-sm": [ "Inter" ], "body-md": [ "Inter" ], "body-sm": [ "Inter" ], "headline-md": [ "Inter" ] }, "fontSize": { "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "body-lg": [ "15px", { "lineHeight": "22px", "fontWeight": "400" } ], "caption": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "label-lg": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "headline-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-xl": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" } ], "headline-xl-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-sm": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "body-md": [ "13px", { "lineHeight": "20px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-md": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 bg-surface-container-lowest border-b border-outline-variant/40 z-50 px-margin flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><img alt="PTS Biopharma Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrC3TcaEYuwiUgXyGbJ_0ea6u5f7BAbpJToNmOK4Yar3kvzqYhgFl1EvVNqWLEiAR0tQqRhZ6JKV8-PfcfjvN8rJpKeZ0CWB7-IqGxEosR6dU_GAvlBEDmZSfAw7dnNtBhjygOdlJAuHn_tuRBSQje34EUN8tZLltAa0m8QMQFOZ6keu4WO3_hT46GuXZx603d1WmskAvzs7ZRaZorMJ_RPxF_E5EQJzp9ui5JjzSplP"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary font-semibold tracking-tight">Product Tracking System</span><span class="px-1.5 py-0.5 rounded bg-surface-container-low border border-outline-variant/50 font-label-sm text-label-sm text-on-surface-variant font-mono">PTS-GMP</span></div><span class="font-caption text-caption text-on-surface-variant">Company Pharmaceutical Limited • Biopharma Packing Division</span></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-2.5 py-1.5 rounded-lg bg-surface-container-low border border-outline-variant/40 font-label-md text-label-md text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-secondary">schedule</span><span>Server: 26/02/2025 14:38 UTC</span></div><div class="flex items-center gap-space-xs px-2.5 py-1.5 rounded-lg bg-error-container/40 border border-error/20 font-label-md text-label-md text-on-error-container font-mono"><span class="w-2 h-2 rounded-full bg-error animate-pulse"></span><span>Idle logoff: 24:18</span></div><div class="h-6 w-px bg-outline-variant/50"></div><button aria-label="Active Deviations and Alerts" class="min-h-[44px] min-w-[44px] relative flex items-center justify-center rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full bg-error text-on-error font-label-sm text-[10px] font-bold ring-2 ring-surface-container-lowest">3</span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-headline-sm text-body-md font-semibold text-on-surface">Anita Shah</span><div class="flex items-center justify-end gap-1"><span class="inline-flex items-center px-1.5 py-0.2 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[10px] uppercase font-semibold">Initiator</span><span class="font-caption text-[11px] text-on-surface-variant">Sec-L2</span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ring-2 ring-outline-variant/30"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-low border-r border-outline-variant/40 z-40 flex flex-col justify-between"><div class="flex flex-col h-full overflow-hidden"><div class="p-space-md border-b border-outline-variant/30"><label class="block font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-1">Operational Context</label><div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest border border-outline-variant/50 cursor-pointer min-h-[44px]"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[20px]">supervised_user_circle</span><div class="flex flex-col"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Packaging Lead</span><span class="font-label-sm text-[10px] text-on-surface-variant font-mono">Cleanroom Line 04</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">unfold_more</span></div></div><div class="flex-1 overflow-y-auto px-3 py-space-md space-y-4"><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><span class="px-3 font-caption text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Batch Core</span><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="binders" href="#"><span class="material-symbols-outlined text-[20px]">folder_managed</span><span class="font-body-md text-body-md">Binders</span></a></nav><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><span class="px-3 font-caption text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Trace &amp; Environmental</span><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="cold-rooms" href="#"><span class="material-symbols-outlined text-[20px]">ac_unit</span><span class="font-body-md text-body-md">Cold rooms</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="scan" href="#"><span class="material-symbols-outlined text-[20px]">qr_code_scanner</span><span class="font-body-md text-body-md">Scan &amp; Verify</span></a></nav><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><span class="px-3 font-caption text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Compliance &amp; Audit</span><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span class="font-body-md text-body-md">Reports &amp; Audit</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg min-h-[44px] text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="electronic-signatures" href="#"><span class="material-symbols-outlined text-[20px]">draw</span><span class="font-body-md text-body-md">Signatures Log</span></a></nav></div><div class="p-space-sm border-t border-outline-variant/30 bg-surface-container-lowest"><div class="flex items-center justify-between p-2 rounded-lg bg-surface-container border border-outline-variant/40"><div class="flex flex-col"><span class="font-caption text-[10px] text-on-surface-variant uppercase">GMP Status</span><span class="font-label-sm text-label-sm text-secondary font-semibold">21 CFR Part 11 Active</span></div><span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span></div></div><div class="bg-tertiary-container px-3 py-2.5 text-center flex items-center justify-center gap-1.5 border-t border-outline-variant/50"><span class="material-symbols-outlined text-tertiary-fixed text-[16px]">warning</span><span class="font-label-sm text-[11px] font-bold tracking-wider text-tertiary-fixed uppercase font-mono">PROTOTYPE – NOT VALIDATED</span></div></div></aside><div class="pl-64"><main class="w-full min-h-screen pt-16 px-gutter bg-surface"><div class="flex flex-col w-full">
+<!-- Top Context Navigation & Metadata Header -->
+<div class="w-full pb-6 pt-2">
+<!-- Breadcrumb & System State Indicator -->
+<div class="flex flex-wrap items-center justify-between gap-4 mb-3">
+<nav class="flex items-center gap-2 font-caption text-caption text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[15px]">home</span>
+<span>Home</span>
+</a>
+<span class="material-symbols-outlined text-[13px] text-outline-variant">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Binders</a>
+<span class="material-symbols-outlined text-[13px] text-outline-variant">chevron_right</span>
+<span class="font-label-sm text-label-sm font-semibold text-primary bg-primary-fixed/40 px-2 py-0.5 rounded">LT-26A017</span>
+<span class="material-symbols-outlined text-[13px] text-outline-variant">chevron_right</span>
+<span class="font-medium text-on-surface">Movement Actions</span>
+</nav>
+<div class="flex items-center gap-2">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>21 CFR §11.10 State: Enforcement Active</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-container/50 text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+<span>Hash Chaining: Live</span>
+</div>
+</div>
+</div>
+<!-- Title & Clinical Compliance Description -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<div class="flex items-center gap-2.5 mb-1">
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold uppercase tracking-wider">S09 Specification</span>
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">Movement Dialogs (Modal Variants)</h1>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+          GMP chain-of-custody transfer confirmation dialogs with mandatory 21 CFR Part 11 audit remarks and automatic server timestamping.
+        </p>
+</div>
+<div class="flex items-center gap-2">
+<button class="min-h-[44px] px-3.5 py-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm font-semibold transition-colors flex items-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">tune</span>
+<span>View Matrix (SOP-GMP-044)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Regulatory Audit Guidance Strip -->
+<div class="w-full mb-6 p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">policy</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">21 CFR §11.10 Integrity &amp; Automated Server Locking Directive</span>
+<span class="px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-[10px] uppercase font-bold">Standard</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          All biological custody modifications require justification remarks prior to signature enablement. Timestamps are acquired strictly via secure Network Time Protocol (NTP) at execution time and cannot be overwritten by station client clocks.
+        </p>
+</div>
+</div>
+<!-- Active Compliance Metrics Strip -->
+<div class="flex items-center gap-6 shrink-0 pt-2 lg:pt-0">
+<div class="flex flex-col text-right">
+<span class="font-caption text-caption text-on-surface-variant uppercase font-medium">NTP Reference</span>
+<span class="font-label-md text-label-md text-on-surface font-mono font-semibold">UTC+00:00 (Atomic)</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-caption text-caption text-on-surface-variant uppercase font-medium">Validation Level</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">Level 3 Non-Repudiation</span>
+</div>
+</div>
+</div>
+<!-- 3-Column Modal Showcase Grid -->
+<div class="w-full grid grid-cols-1 lg:grid-cols-3 gap-6 pb-12">
+<!-- ========================================================================= -->
+<!-- MODAL VARIANT 1: Load into Cold Room -->
+<!-- ========================================================================= -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest shadow-md overflow-hidden transition-all duration-200 hover:shadow-lg">
+<!-- Modal Header -->
+<div class="p-4 bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[19px]">ac_unit</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface leading-tight">Load into Cold Room</h2>
+<span class="font-caption text-caption text-on-surface-variant">Variant 01 • Inbound Buffer to Chamber</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-[10px] uppercase font-bold tracking-wider font-mono">MODAL-S09.1</span>
+</div>
+<!-- Target Product Banner -->
+<div class="p-4 bg-primary/5">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-body-md text-body-md font-semibold text-primary">Insulin Glargine 100 IU/mL</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm font-mono text-secondary font-semibold shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            LT-26A017
+          </span>
+</div>
+<div class="flex items-center gap-3 font-caption text-caption text-on-surface-variant">
+<span>Batch: <strong class="font-mono text-on-surface">B260117</strong></span>
+<span>•</span>
+<span>Target Env: <strong class="text-on-surface">+2°C to +8°C</strong></span>
+</div>
+</div>
+<!-- Modal Body Form -->
+<div class="p-5 flex-1 flex flex-col gap-4">
+<!-- Cold Room Selector -->
+<div>
+<label class="block font-caption text-caption uppercase tracking-wider text-on-surface-variant font-semibold mb-1">
+            Target Cold Room <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full min-h-[44px] pl-3 pr-9 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm font-medium focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer">
+<option selected="">CR-01 (Primary Cold Room, +2°C to +8°C)</option>
+<option>CR-02 (Secondary Bio-Holding, +2°C to +8°C)</option>
+<option>CR-03 (Backup Quarantine Unit, +2°C to +8°C)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Rack Scan & Select -->
+<div>
+<label class="block font-caption text-caption uppercase tracking-wider text-on-surface-variant font-semibold mb-1">
+            Rack ID / Shelf Allocation <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full min-h-[44px] pl-3 pr-9 py-2 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md font-mono focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer">
+<option selected="">RK-CR01-001 (Shelf S-02)</option>
+<option>RK-CR01-001 (Shelf S-03)</option>
+<option>RK-CR01-002 (Shelf S-01)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 pointer-events-none text-on-surface-variant text-[20px]">shelves</span>
+</div>
+</div>
+<!-- Pallet Scan Field with Verified Status -->
+<div>
+<label class="block font-caption text-caption uppercase tracking-wider text-on-surface-variant font-semibold mb-1">
+            Pallet Scan Verification <span class="text-error">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px]">qr_code_scanner</span>
+<input class="w-full min-h-[44px] pl-10 pr-28 py-2 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md font-mono font-medium focus:outline-none select-all" readonly="" type="text" value="PL-26-000124"/>
+<div class="absolute right-2 px-2 py-1 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[11px] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Scan Active: Verified ✓</span>
+</div>
+</div>
+</div>
+<!-- Stage Transition Flow Visualizer -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-[10px] uppercase text-on-surface-variant font-bold">Stage Transition</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Filling Buffer</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">arrow_forward</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary">Cold Room Storage</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">swap_horiz</span>
+</div>
+<!-- Automatic Server Timestamping Strip -->
+<div class="px-3 py-2 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[17px]">lock_clock</span>
+<span class="font-caption text-caption text-on-surface-variant">Recorded automatically:</span>
+</div>
+<span class="font-label-sm text-label-sm font-mono font-semibold text-on-surface">22/11/2026 15:42 (UTC+00:00)</span>
+</div>
+<!-- Mandatory Remarks Textarea (Active & Valid) -->
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between mb-1">
+<label class="font-caption text-caption uppercase tracking-wider text-on-surface font-semibold">
+              Movement Remarks &amp; Verification (Mandatory for §11.10) <span class="text-error">*</span>
+</label>
+<span class="font-label-sm text-[11px] text-secondary font-mono font-bold">48 / 20 min</span>
+</div>
+<textarea class="w-full p-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all resize-none" placeholder="Enter reason for movement, pallet condition, and ambient transfer elapsed..." rows="3">Batch verified intact. Transfer cart IC-04 sanitized and placed on Shelf S-02.</textarea>
+<span class="font-caption text-[11px] text-secondary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check</span>
+<span>Character requirement met. 21 CFR signature token generated.</span>
+</span>
+</div>
+</div>
+<!-- Modal Footer Action Buttons -->
+<div class="p-4 bg-surface-container-low flex items-center justify-between gap-3">
+<button class="min-h-[44px] px-4 py-2 rounded-lg bg-surface-container-highest hover:bg-surface-dim text-on-surface-variant font-body-sm text-body-sm font-medium transition-colors" type="button">
+          Cancel
+        </button>
+<button class="min-h-[44px] flex-1 px-4 py-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-body-sm text-body-sm font-semibold transition-all shadow flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">fingerprint</span>
+<span>Confirm &amp; Sign Movement</span>
+</button>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- MODAL VARIANT 2: Unload / Withdraw from Cold Room -->
+<!-- ========================================================================= -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest shadow-md overflow-hidden transition-all duration-200 hover:shadow-lg">
+<!-- Modal Header -->
+<div class="p-4 bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[19px]">drive_file_move</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface leading-tight">Unload / Withdraw Product</h2>
+<span class="font-caption text-caption text-on-surface-variant">Variant 02 • Cleanroom Line Pull</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-[10px] uppercase font-bold tracking-wider font-mono">MODAL-S09.2</span>
+</div>
+<!-- Target Product Banner -->
+<div class="p-4 bg-secondary/5">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-body-md text-body-md font-semibold text-secondary">Filgrastim 300 mcg/0.5 mL</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm font-mono text-secondary font-semibold shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            LT-26A014
+          </span>
+</div>
+<div class="flex items-center gap-3 font-caption text-caption text-on-surface-variant">
+<span>Batch: <strong class="font-mono text-on-surface">B260114</strong></span>
+<span>•</span>
+<span>Current Bay: <strong class="font-mono text-on-surface">CR-01 / RK-CR01-004</strong></span>
+</div>
+</div>
+<!-- Modal Body Form -->
+<div class="p-5 flex-1 flex flex-col gap-4">
+<!-- Current Location Indicator Strip -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">pin_drop</span>
+<div class="flex flex-col">
+<span class="font-caption text-[10px] uppercase text-on-surface-variant font-bold">Source Origin Bay</span>
+<span class="font-label-md text-label-md font-mono font-semibold text-on-surface">CR-01 / RK-CR01-004 (Shelf S-01)</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-[10px] text-on-surface-variant uppercase font-semibold">Active</span>
+</div>
+<!-- "Move to" Stage Selector -->
+<div>
+<label class="block font-caption text-caption uppercase tracking-wider text-on-surface-variant font-semibold mb-1">
+            Select Destination Stage <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full min-h-[44px] pl-3 pr-9 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm font-medium focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer">
+<option selected="">Visual Inspection Buffer (Station 04)</option>
+<option>Secondary Packaging Cleanroom Line 02</option>
+<option>Quarantine / Deviation Hold Enclosure</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Destination Target Buffer -->
+<div>
+<label class="block font-caption text-caption uppercase tracking-wider text-on-surface-variant font-semibold mb-1">
+            Designated Line Target Buffer
+          </label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">precision_manufacturing</span>
+<input class="w-full min-h-[44px] pl-10 pr-4 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm font-medium focus:outline-none" readonly="" type="text" value="Line 04 Inspection Conveyor Buffer"/>
+</div>
+</div>
+<!-- Critical Hold-Time Countdown Warning Banner -->
+<div class="p-3.5 rounded-lg bg-surface-container flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">timer</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-secondary">Hold-Time Countdown Trigger</span>
+<p class="font-caption text-caption text-on-surface-variant mt-0.5">
+              Starting <strong class="font-mono text-on-surface">1h 00m</strong> ambient hold-time countdown clock upon confirmation. Maximum allowed cleanroom dwell limit: 2h 30m.
+            </p>
+</div>
+</div>
+<!-- Automatic Server Timestamping Strip -->
+<div class="px-3 py-2 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[17px]">lock_clock</span>
+<span class="font-caption text-caption text-on-surface-variant">Recorded automatically:</span>
+</div>
+<span class="font-label-sm text-label-sm font-mono font-semibold text-on-surface">22/11/2026 15:42 (UTC+00:00)</span>
+</div>
+<!-- Mandatory Remarks Textarea (Active & Valid) -->
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between mb-1">
+<label class="font-caption text-caption uppercase tracking-wider text-on-surface font-semibold">
+              Movement Remarks &amp; Temperature Check <span class="text-error">*</span>
+</label>
+<span class="font-label-sm text-[11px] text-secondary font-mono font-bold">78 / 20 min</span>
+</div>
+<textarea class="w-full p-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all resize-none" placeholder="Enter remarks for withdrawal..." rows="3">Withdrawn for scheduled 100% visual inspection. Temp verified 4.1°C at withdrawal.</textarea>
+<span class="font-caption text-[11px] text-secondary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">verified_user</span>
+<span>Critical temperature probe calibration verified (NIST-6894).</span>
+</span>
+</div>
+</div>
+<!-- Modal Footer Action Buttons -->
+<div class="p-4 bg-surface-container-low flex items-center justify-between gap-3">
+<button class="min-h-[44px] px-4 py-2 rounded-lg bg-surface-container-highest hover:bg-surface-dim text-on-surface-variant font-body-sm text-body-sm font-medium transition-colors" type="button">
+          Cancel
+        </button>
+<button class="min-h-[44px] flex-1 px-4 py-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-body-sm text-body-sm font-semibold transition-all shadow flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Confirm &amp; Sign Withdrawal</span>
+</button>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- MODAL VARIANT 3: Transfer Location (Internal Re-allocation) -->
+<!-- ========================================================================= -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest shadow-md overflow-hidden transition-all duration-200 hover:shadow-lg">
+<!-- Modal Header -->
+<div class="p-4 bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[19px]">swap_horizontal_circle</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface leading-tight">Transfer Product Location</h2>
+<span class="font-caption text-caption text-on-surface-variant">Variant 03 • Internal Re-allocation</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-[10px] uppercase font-bold tracking-wider font-mono">MODAL-S09.3</span>
+</div>
+<!-- Target Product Banner -->
+<div class="p-4 bg-tertiary/5">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-body-md text-body-md font-semibold text-tertiary">Adalimumab 40 mg/0.8 mL</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm font-mono text-tertiary font-semibold shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+            LT-26A018
+          </span>
+</div>
+<div class="flex items-center gap-3 font-caption text-caption text-on-surface-variant">
+<span>Batch: <strong class="font-mono text-on-surface">B260118</strong></span>
+<span>•</span>
+<span>Carton Units: <strong class="font-mono text-on-surface">480 Vials</strong></span>
+</div>
+</div>
+<!-- Modal Body Form -->
+<div class="p-5 flex-1 flex flex-col gap-4">
+<!-- From -> To Transfer Mapping Architecture -->
+<div class="flex flex-col gap-2.5">
+<span class="font-caption text-caption uppercase tracking-wider text-on-surface-variant font-semibold">Bay &amp; Rack Mapping</span>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<!-- FROM -->
+<div class="flex items-start gap-2.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-[10px] uppercase font-bold text-on-surface-variant shrink-0 mt-0.5">FROM</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-mono font-semibold text-on-surface truncate">Cold Room CR-01</span>
+<span class="font-caption text-caption text-on-surface-variant font-mono">Shelf S-01, Pallet PL-26-000118</span>
+</div>
+</div>
+<!-- Directional indicator -->
+<div class="flex items-center justify-center my-0.5">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</div>
+</div>
+<!-- TO -->
+<div class="flex items-start gap-2.5">
+<span class="px-1.5 py-0.5 rounded bg-secondary-container font-label-sm text-[10px] uppercase font-bold text-on-secondary-container shrink-0 mt-0.5">TO</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-mono font-semibold text-primary truncate">Cold Room CR-02</span>
+<span class="font-caption text-caption text-on-surface-variant font-mono">Shelf S-03, Rack RK-CR02-008</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Reason Category Selector -->
+<div>
+<label class="block font-caption text-caption uppercase tracking-wider text-on-surface-variant font-semibold mb-1">
+            Reason for Transfer Category <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full min-h-[44px] pl-3 pr-9 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm font-medium focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer">
+<option selected="">Chamber Maintenance / Space Optimization</option>
+<option>Temperature Profiling Redistribution</option>
+<option>Line Reconciliation Preparation</option>
+<option>Secondary Segregation (Non-conformity)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Automatic Server Timestamping Strip -->
+<div class="px-3 py-2 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[17px]">lock_clock</span>
+<span class="font-caption text-caption text-on-surface-variant">Recorded automatically:</span>
+</div>
+<span class="font-label-sm text-label-sm font-mono font-semibold text-on-surface">22/11/2026 15:42 (UTC+00:00)</span>
+</div>
+<!-- Mandatory Remarks Textarea (DISABLED DEMO STATE) -->
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between mb-1">
+<label class="font-caption text-caption uppercase tracking-wider text-on-surface font-semibold flex items-center gap-1">
+              Movement Remarks (Mandatory) <span class="text-error">*</span>
+</label>
+<span class="font-label-sm text-[11px] text-error font-mono font-semibold">0 / 10 min</span>
+</div>
+<!-- Empty Textarea displaying unfulfilled validation state -->
+<div class="relative">
+<textarea class="w-full p-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-error transition-all resize-none placeholder:text-on-surface-variant/60" id="transfer-remarks-input" placeholder="Mandatory justification required to enable confirmation..." rows="3"></textarea>
+</div>
+<!-- Non-compliant Helper Feedback Message -->
+<div class="mt-2 p-2 rounded bg-error-container/40 flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[17px] shrink-0">error</span>
+<span class="font-caption text-[11px] text-on-error-container font-medium">
+              Confirm button is disabled until remarks are entered (minimum 10 characters).
+            </span>
+</div>
+</div>
+</div>
+<!-- Modal Footer Action Buttons (Disabled State Showcase) -->
+<div class="p-4 bg-surface-container-low flex items-center justify-between gap-3">
+<button class="min-h-[44px] px-4 py-2 rounded-lg bg-surface-container-highest hover:bg-surface-dim text-on-surface-variant font-body-sm text-body-sm font-medium transition-colors" type="button">
+          Cancel
+        </button>
+<!-- Clearly Disabled Button with Lock Icon and Tooltip Affordance -->
+<button class="min-h-[44px] flex-1 px-4 py-2 rounded-lg bg-surface-container-high text-on-surface-variant/50 font-body-sm text-body-sm font-semibold cursor-not-allowed flex items-center justify-center gap-2 shadow-none select-none transition-colors" disabled="" id="transfer-confirm-btn" title="Remarks required to sign" type="button">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span>Confirm Transfer</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive Comparison & Operational Matrix Table -->
+<div class="w-full mb-8 rounded-xl bg-surface-container-lowest p-6 shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 pb-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Modal Operational Matrix &amp; Trigger Conditions</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Summary of physical state transitions, environmental limits, and authorization requisites.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm font-mono text-on-surface-variant">Spec: CFR-21-SEC-09</span>
+</div>
+</div>
+<!-- Data Table Showcase -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low font-caption text-caption uppercase text-on-surface-variant font-semibold">
+<th class="py-3 px-4">Action Variant</th>
+<th class="py-3 px-4">Physical Destination</th>
+<th class="py-3 px-4">Environmental Constraint</th>
+<th class="py-3 px-4">Hold-Time Impact</th>
+<th class="py-3 px-4">Barcode Scan Req.</th>
+<th class="py-3 px-4">Min. Remarks</th>
+<th class="py-3 px-4 text-right">Electronic Sig. Level</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-4 font-medium text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">ac_unit</span>
+              Load into Cold Room
+            </td>
+<td class="py-3 px-4 font-mono font-medium">CR-01 / CR-02 (Cold Room Bay)</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-secondary-container/50 text-on-secondary-container font-label-sm text-[11px] font-mono">
+                +2.0°C to +8.0°C
+              </span>
+</td>
+<td class="py-3 px-4 text-on-surface-variant">Stops ambient exposure clock</td>
+<td class="py-3 px-4 font-mono">PL-26-XXXXXX (Mandatory)</td>
+<td class="py-3 px-4 font-mono">20 characters</td>
+<td class="py-3 px-4 text-right">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-semibold text-secondary">Level 2 (Dual Token)</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-4 font-medium text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">drive_file_move</span>
+              Unload / Withdraw
+            </td>
+<td class="py-3 px-4 font-mono font-medium">Visual Inspection Buffer (Station 04)</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-primary-fixed/40 text-primary font-label-sm text-[11px] font-mono">
+                Cleanroom ISO 7
+              </span>
+</td>
+<td class="py-3 px-4">
+<span class="font-semibold text-error flex items-center gap-1 font-mono text-[12px]">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+                Starts 1h 00m Countdown
+              </span>
+</td>
+<td class="py-3 px-4 font-mono">Station Slot Barcode</td>
+<td class="py-3 px-4 font-mono">20 characters</td>
+<td class="py-3 px-4 text-right">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-semibold text-secondary">Level 2 (Lead Sign)</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-4 font-medium text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">swap_horizontal_circle</span>
+              Transfer Location
+            </td>
+<td class="py-3 px-4 font-mono font-medium">Cold Room CR-02 (Shelf S-03)</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-secondary-container/50 text-on-secondary-container font-label-sm text-[11px] font-mono">
+                +2.0°C to +8.0°C
+              </span>
+</td>
+<td class="py-3 px-4 text-on-surface-variant">Neutral (&lt;10m transfer cart)</td>
+<td class="py-3 px-4 font-mono">Target Rack QR</td>
+<td class="py-3 px-4 font-mono">10 characters</td>
+<td class="py-3 px-4 text-right">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-semibold text-secondary">Level 1 (Single Sign)</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Client-side Interactive Behavior for Variant 3 Demo Validation -->
+<script>
+    (function initMovementDialogMicroInteractions() {
+      const remarksInput = document.getElementById('transfer-remarks-input');
+      const confirmBtn = document.getElementById('transfer-confirm-btn');
+
+      if (!remarksInput || !confirmBtn) return;
+
+      remarksInput.addEventListener('input', function(e) {
+        const val = e.target.value.trim();
+        const minLength = 10;
+        
+        if (val.length >= minLength) {
+          confirmBtn.disabled = false;
+          confirmBtn.classList.remove('bg-surface-container-high', 'text-on-surface-variant/50', 'cursor-not-allowed', 'shadow-none');
+          confirmBtn.classList.add('bg-primary-container', 'hover:bg-primary', 'text-on-primary', 'shadow', 'cursor-pointer');
+          confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">fingerprint</span><span>Confirm Transfer &amp; Sign</span>';
+          confirmBtn.removeAttribute('title');
+        } else {
+          confirmBtn.disabled = true;
+          confirmBtn.classList.add('bg-surface-container-high', 'text-on-surface-variant/50', 'cursor-not-allowed', 'shadow-none');
+          confirmBtn.classList.remove('bg-primary-container', 'hover:bg-primary', 'text-on-primary', 'shadow', 'cursor-pointer');
+          confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">lock</span><span>Confirm Transfer</span>';
+          confirmBtn.setAttribute('title', 'Remarks required to sign');
+        }
+      });
+    })();
+  </script>
+</div></main></div></body></html>

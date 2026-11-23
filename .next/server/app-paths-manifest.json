@@ -1,0 +1,7 @@
+{
+  "/reports/batch-print/page": "app/reports/batch-print/page.js",
+  "/page": "app/page.js",
+  "/admin/barcode-designer/page": "app/admin/barcode-designer/page.js",
+  "/binders/detail/page": "app/binders/detail/page.js",
+  "/reports/page": "app/reports/page.js"
+}
